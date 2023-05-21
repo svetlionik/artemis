@@ -1,0 +1,56 @@
+@import 'custom.scss';
+
+// test list
+.testListContainer {
+  width: 100%;
+  margin: auto;
+  min-height: 90vh;
+  height: auto;
+
+  .testInformation {
+    h1 {
+      @include newTextClass(normal normal 600 32px/39px Montserrat, $primary);
+      text-align: center;
+      padding-top: 72px;
+      margin-bottom: 24px;
+    }
+
+    p {
+      @include newTextClass(
+        normal normal normal 20px/32px Montserrat,
+        $text-color-two
+      );
+      text-align: center;
+      padding: 0px;
+      margin-bottom: 72px;
+    }
+  }
+
+  .testsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .testListContainer {
+    .testsContainer {
+      max-width: 868px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+}
+@media screen and (max-width: 998px) {
+  .testListContainer {
+    padding: 0 36px !important;
+    .testsContainer {
+      max-width: 435px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  }
+}

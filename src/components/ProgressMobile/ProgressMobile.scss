@@ -1,0 +1,65 @@
+@import 'custom.scss';
+
+$custom-color-line: #eeeeee;
+$terminated-shadow: #da004426;
+$step-color: #e2e5de;
+$step-active-box: #f6b40033;
+
+.activeStep_1 {
+  background: linear-gradient(to right, $warning 5%, $warning-light 0%);
+}
+
+.activeStep_2 {
+  background: linear-gradient(to right, $warning 20%, $warning-light 10%);
+}
+
+.activeStep_3 {
+  background: linear-gradient(to right, $warning 50%, $warning-light 50%);
+}
+
+.activeStep_4 {
+  background: linear-gradient(to right, $warning 80%, $warning-light 20%);
+}
+
+.activeStep_5 {
+  background: $warning;
+}
+.passedStep_1 {
+  background: linear-gradient(to right, $primary 5%, $primary-two 0%);
+}
+
+.passedStep_2 {
+  background: linear-gradient(to right, $primary 20%, $primary-two 10%);
+}
+
+.passedStep_3 {
+  background: linear-gradient(to right, $primary 50%, $primary-two 50%);
+}
+
+.passedStep_4 {
+  background: linear-gradient(to right, $primary 80%, $primary-two 20%);
+}
+
+.passedStep_5 {
+  background: $success;
+  border: 2px solid $success !important;
+}
+
+.failedStep {
+  background: $danger;
+  border: 2px solid $danger !important;
+  border-radius: 8px;
+  height: 45px;
+}
+
+[class*='activeStep_'] {
+  border: 2px solid $warning;
+  border-radius: 8px;
+  height: 45px;
+}
+
+[class*='passedStep_'] {
+  border: 2px solid $primary;
+  border-radius: 8px;
+  height: 45px;
+}

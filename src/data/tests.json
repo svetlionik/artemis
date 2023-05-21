@@ -1,0 +1,22 @@
+{
+  "admission": {
+    "name": "Admission Test",
+    "questions": "30",
+    "duration": 30,
+    "instructions": [
+      {
+        "text": "You can start the test by pressing the button below. Before that, here are some tips for better performance: ",
+        "tips": [
+          "The test consists of 30 questions - they are not arranged by complexity.",
+          "You can go back to the previous questions.",
+          "The test lasts 30 minutes.",
+          "Each correct answer brings you 1 point, wrong - 0 points, unanswered - 0 points."
+        ]
+      }
+    ]
+  },
+  "cognitive": {
+    "questions": 30,
+    "duration": 40
+  }
+}

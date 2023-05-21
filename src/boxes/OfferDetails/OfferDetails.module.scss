@@ -1,0 +1,94 @@
+@import '../../custom.scss';
+
+$passed-background: #f0f4ff;
+
+.divider {
+  background-color: $text-color-four;
+  height: 2px;
+  width: auto;
+  margin: 0px auto 24px auto;
+}
+
+.hrTitles {
+  padding-left: 8px;
+  vertical-align: middle;
+  margin: auto 0;
+  @include textCustomNew(600, 16px, 19px, $primary, left);
+}
+
+.mobileDetailsDiv {
+  max-width: 820px;
+  width: auto;
+  margin: auto;
+  background: $secondary 0% 0% no-repeat padding-box;
+  border-radius: 0px 0px 5px 5px;
+  padding: 32px 168px 0px 168px !important;
+  border: 2px solid $text-color-four;
+  border-top: none;
+
+  h6 {
+    background: $passed-background 0% 0% no-repeat padding-box;
+    @include textCustomNew(600, 18px, 22px, $text-color, left);
+    border-radius: 5px;
+    padding: 8px;
+    margin: 0;
+    height: 40px;
+  }
+  p {
+    @include textCustomNew(normal, 16px, 22px, $text-color, left);
+    padding: 16px 8px 32px 8px;
+    margin: 0;
+  }
+
+  .conditional {
+    padding: 0px 8px 32px 8px;
+    p {
+      display: inline;
+      .hrTitles {
+        padding: 0px 8px 0px 0px;
+        @include textCustomNew(600, 16px, 19px, $primary, left);
+      }
+      text-align: left;
+      font: italic normal normal 14px/22px Montserrat;
+      letter-spacing: 0px;
+      color: #000000;
+      padding: 0;
+    }
+  }
+}
+@media only screen and (max-width: 988px) {
+  .mobileDetailsDiv {
+    width: 100%;
+    margin: auto;
+    padding: 0 !important;
+    border: 2px solid $text-color-four;
+    border-top: none;
+
+    h5 {
+      margin: 0;
+      padding: 24px 5% 0 5%;
+      font: normal normal 500 16px/19px Montserrat;
+      letter-spacing: 0px;
+      color: $text-color;
+    }
+
+    p {
+      text-align: left;
+      font: normal normal normal 16px/19px Montserrat;
+      letter-spacing: 0px;
+      color: $text-color;
+      padding: 16px 5% 16px 5%;
+    }
+
+    h6 {
+      text-align: left;
+      font: normal normal 600 16px/19px Montserrat;
+      letter-spacing: 0px;
+      color: $text-color;
+      padding-left: 5%;
+      border-radius: 0;
+      height: 48px;
+      padding-top: 14px;
+    }
+  }
+}

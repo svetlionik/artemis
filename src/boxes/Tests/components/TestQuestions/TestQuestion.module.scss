@@ -1,0 +1,155 @@
+@import 'custom.scss';
+
+$border-color: #f6f6f6;
+$background-second-color: #e2e5de;
+$step-shadow: #f6b40033;
+
+.testQuestionContainer {
+  display: 'flex';
+  min-height: 88vh;
+  height: '100%';
+  flex: 1;
+
+  .reversedContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: row-reverse;
+
+    .questionsContainer {
+      display: flex;
+      flex: 0.8;
+      flex-direction: row;
+
+      .questionContainer {
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+
+        .question {
+          min-height: 88vh;
+          height: auto;
+          width: 920px;
+          margin: auto;
+          margin-top: 100px;
+
+          // Submit button and previous/next questions
+          .btnContainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 48px auto;
+
+            .btn {
+              @include oneButton(
+                $accent,
+                $accent,
+                $accent,
+                $accent-hover,
+                $accent-hover
+              );
+              width: 252px;
+
+              &.disabled {
+                background: $text-color-four 0% 0% no-repeat padding-box;
+                border: $text-color-four;
+                color: $text-color-two;
+              }
+            }
+
+            span {
+              .arrowBtn {
+                background-color: $secondary;
+                border: 2px solid $text-color-four;
+                width: 40px;
+                height: 40px;
+                margin: 0 8px;
+                svg {
+                  margin-left: -4px;
+                  cursor: pointer;
+                }
+                &:hover {
+                  background-color: $accent-hover;
+                  border: 2px solid $accent-hover;
+                  svg {
+                    filter: brightness(0) invert(1);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1095px) {
+  .testQuestionContainer {
+    display: 'flex';
+    min-height: 88vh;
+    height: '100%';
+    flex: 1;
+
+    .reversedContainer {
+      .questionsContainer {
+        flex: 1;
+
+        .questionContainer {
+          .question {
+            min-height: 88vh;
+            height: auto;
+            width: 100%;
+            margin: auto;
+            margin-top: 100px;
+
+            .btnContainer {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              margin: 64px auto 48px auto;
+
+              .btn {
+                border-radius: 4px;
+                opacity: 1;
+                width: 100%;
+                max-width: 414px;
+                height: 40px;
+                order: 2;
+                margin: auto !important;
+
+                &:hover {
+                  border-radius: 2px;
+                }
+              }
+
+              span {
+                order: 1;
+                margin: auto auto 16px auto;
+                // margin-bottom: 16px;
+
+                .arrowBtn {
+                  margin: 0;
+                  width: 144px;
+                  height: 40px;
+
+                  &:first {
+                    margin-right: 8px;
+                  }
+                  &:nth-child(2) {
+                    margin-left: 8px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media print {
+  .testQuestionContainer {
+    display: none;
+  }
+}

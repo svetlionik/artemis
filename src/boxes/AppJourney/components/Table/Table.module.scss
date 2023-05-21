@@ -1,0 +1,458 @@
+@import 'custom.scss';
+
+$custom-color-line: #eeeeee;
+$progress: #f6b400;
+$progress-background: #fff6de;
+$passed-background: #f0f4ff;
+$terminated-background: #fbe5ec;
+$terminated-shadow: #da004426;
+$employed: #7e9d6e;
+$employed-background: #dfedd8;
+$step-color: #e2e5de;
+$step-active-box: #f6b40033;
+
+[class*='Card'] {
+  [class*='Header'] {
+    .bigBox {
+      max-width: 1164px;
+      display: grid;
+      grid-template-columns: 3fr 4fr 3fr 2fr 2fr;
+      justify-content: space-around;
+      width: 100%;
+      margin: auto;
+      padding: 0;
+      height: 96px;
+      outline-offset: -2px;
+      border-radius: 8px;
+
+      p {
+        @include xsLeftText($text-color-two);
+        margin-bottom: 8px;
+      }
+      h6 {
+        @include smLeftTextBold($text-color);
+        margin-bottom: 0px;
+        span {
+          text-decoration: underline;
+          cursor: pointer;
+          color: $primary;
+
+          svg {
+            padding: 0px 0px 4px 0px;
+            margin-left: 6px;
+          }
+        }
+      }
+      .btn {
+        @include smLeftTextBold($text-color);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 0px;
+        padding: 0;
+        margin-top: -4px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .btnActive {
+        color: $primary;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .lgRow {
+        margin: 24px 0px 24px 24px;
+        padding-right: 24px;
+        height: 45px;
+        .mobileTitle {
+          display: none;
+        }
+        .desktop {
+          display: block;
+        }
+
+        .meetingBtn {
+          max-width: 152px;
+          width: auto;
+          background-color: #5b5fc7;
+          border-radius: 4px;
+          height: 24px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin-top: -4px;
+          padding: 4px 14px 4px 8px;
+
+          .link {
+            @include textCustomNew(600, 12px, 15px, $secondary, left);
+            text-decoration: none;
+          }
+
+          svg {
+            margin-top: 1px;
+            width: 14px;
+            height: 14px;
+          }
+        }
+
+        .meetingBtn.disabledBtn {
+          background-color: $text-color-four;
+          .link {
+            pointer-events: none;
+            color: $text-color-three;
+          }
+          svg {
+            filter: invert(37%) sepia(7%) saturate(0%) hue-rotate(151deg)
+              brightness(99%) contrast(80%);
+          }
+        }
+      }
+
+      .middleLine {
+        display: none;
+      }
+    }
+  }
+}
+
+.progressCard {
+  padding: 8px 0 32px 0;
+  .progressHeader {
+    background: $progress-background 0% 0% no-repeat padding-box !important;
+    .bigBox {
+      outline: 2px solid $progress !important;
+      box-shadow: 0px -5px 15px $progress-background,
+        0px 5px 15px $progress-background;
+      z-index: 9999;
+      .lgRow {
+        border-right: 2px solid $progress !important;
+      }
+
+      .hideRow {
+        margin-left: -2px;
+        border-left: 2px solid $progress-background !important;
+      }
+    }
+    p {
+      color: $text-color-two;
+    }
+  }
+}
+
+.passedCard {
+  padding: 8px 0;
+  .passedHeader {
+    background: $passed-background 0% 0% no-repeat padding-box !important;
+    margin-bottom: 2%;
+    .bigBox {
+      outline: 2px solid $primary !important;
+      box-shadow: 0px -5px 15px $passed-background,
+        0px 5px 15px $passed-background;
+      .lgRow {
+        border-right: 2px solid $primary !important;
+      }
+
+      .hideRow {
+        border-left: 3px solid $passed-background !important;
+        margin-left: -2px;
+      }
+    }
+    p {
+      color: $text-color-three;
+    }
+  }
+}
+
+.employedCard {
+  padding: 8px 0;
+  .employedHeader {
+    background: $employed-background 0% 0% no-repeat padding-box;
+    opacity: 1;
+    margin-bottom: 2%;
+    .bigBox {
+      outline: 2px solid $employed !important;
+      box-shadow: 0px -5px 15px $employed-background,
+        0px 5px 15px $employed-background;
+      .lgRow {
+        border-right: 2px solid $employed !important;
+      }
+    }
+    p {
+      color: $text-color-three;
+    }
+  }
+}
+
+.terminatedCard {
+  padding: 8px 0;
+  .terminatedHeader {
+    background: $terminated-background 0% 0% no-repeat padding-box !important;
+    box-shadow: 0px 5px 15px $terminated-shadow !important;
+    opacity: 1;
+    margin-bottom: 2%;
+    .bigBox {
+      outline: 2px solid $danger !important;
+      box-shadow: 0px -5px 15px $terminated-background,
+        0px 5px 15px $terminated-background;
+      .lgRow {
+        border-right: 2px solid $danger !important;
+      }
+    }
+    p {
+      color: $text-color-three;
+    }
+  }
+}
+// FOR ACCORDION MENU
+.mobileDetailsDiv {
+  background: $secondary 0% 0% no-repeat padding-box;
+  border-radius: 0px 0px 5px 5px;
+  padding: 32px 32px 0px 32px !important;
+  border: 2px solid $text-color-four !important;
+  border-top: none !important;
+
+  h5 {
+    padding: 32px 8px 0px 8px;
+    margin: 0;
+    font: normal normal 500 18px/22px Montserrat !important;
+    letter-spacing: 0px;
+    color: $text-color !important;
+  }
+  h6 {
+    background: $passed-background 0% 0% no-repeat padding-box;
+    text-align: left;
+    font: normal normal 600 18px/22px Montserrat !important;
+    letter-spacing: 0px;
+    color: $text-color;
+    border-radius: 5px;
+    padding: 8px;
+    margin: 0;
+    height: 40px;
+  }
+  p {
+    padding: 16px 8px 32px 8px;
+    margin: 0 !important;
+    text-align: left;
+    font: normal normal normal 16px/22px Montserrat !important;
+    letter-spacing: 0px;
+    color: $text-color !important;
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: 988px) {
+  [class*='Card'] {
+    [class*='Header'] {
+      .bigBox {
+        .lgRow {
+          margin: 0;
+          border-right: none !important;
+          padding: 24px;
+        }
+      }
+    }
+  }
+  .progressCard {
+    padding-bottom: 8px;
+
+    .progressHeader {
+      width: 100%;
+      background-color: $secondary !important;
+
+      .lgRow:nth-child(1) {
+        background-color: $progress-background;
+        border: 2px solid $progress !important;
+        border-right: 1px solid $progress;
+        box-shadow: 0px 5px 15px $progress-background !important;
+      }
+    }
+  }
+
+  .passedCard {
+    padding: 8px 0;
+    margin-bottom: 0 !important;
+    .passedHeader {
+      width: 100%;
+      background-color: $secondary !important;
+      min-height: 72px;
+      margin-bottom: 0 !important;
+      // main visible field on mobile devices
+      .lgRow:nth-child(1) {
+        border-right: 1px solid $primary;
+        background-color: $passed-background;
+        border: 2px solid $primary !important;
+      }
+    }
+  }
+
+  .terminatedCard {
+    padding: 8px 0;
+    margin-bottom: 0 !important;
+    .terminatedHeader {
+      width: 100%;
+      background-color: $text-color !important;
+      min-height: 72px;
+      margin-bottom: 0 !important;
+      // main visible field on mobile devices
+      .lgRow:nth-child(1) {
+        background-color: $terminated-background;
+        border: 2px solid $danger !important;
+        border-right: 1px solid $danger;
+      }
+    }
+  }
+
+  .employedCard {
+    padding: 8px 0;
+    margin-bottom: 0 !important;
+    .employedHeader {
+      width: 100%;
+      background-color: $secondary !important;
+      min-height: 72px;
+      margin-bottom: 0 !important;
+      // main visible field on mobile devices
+      .lgRow:nth-child(1) {
+        background-color: $employed-background;
+        border: 2px solid $employed !important;
+        border-right: 1px solid $employed;
+      }
+    }
+  }
+  [class*='Card'] {
+    [class*='Header'] {
+      .bigBox {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+        height: auto;
+
+        .lgRow:nth-child(1) {
+          height: 64px;
+          border-radius: 4px;
+          padding: 16px;
+          vertical-align: middle;
+          p {
+            @include smLeftTextBold($text-color);
+          }
+          .mobileTitle {
+            display: block;
+          }
+          .desktop {
+            display: none;
+          }
+        }
+
+        .lgRow:nth-child(2) {
+          padding: 8px 24px;
+          height: 34px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        .lgRow:nth-child(3) {
+          padding: 8px 24px;
+          height: 34px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        .lgRow:nth-child(4) {
+          padding: 8px 24px 8px 24px;
+          height: 34px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        .middleLine {
+          background-color: $custom-color-line;
+          display: block;
+          height: 2px;
+          width: 100%;
+        }
+        .lgRow:nth-child(6) {
+          padding: 16px 24px;
+          height: 54px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          .btn {
+            padding: 0;
+          }
+        }
+
+        .lgRow {
+          .meetingBtn {
+            margin-top: -4px;
+            width: 152px;
+            height: 32px;
+            padding: 8px 14px 8px 8px;
+            svg {
+              margin-top: 1px;
+            }
+          }
+        }
+      }
+      .arrowIcon {
+        width: 24px;
+        height: 24px;
+      }
+    }
+    .mobileMenu {
+      border: 2px solid $text-color-four !important;
+      border-bottom: none !important;
+      margin-top: -2px;
+      p {
+        text-align: left;
+        font: normal normal 500 16px/19px Montserrat !important;
+        letter-spacing: 0px;
+        color: $text-color !important;
+        padding: 2px 0px;
+      }
+
+      h6 {
+        text-align: left;
+        font: normal normal normal 16px/19px Montserrat;
+        letter-spacing: 0px;
+        color: $text-color;
+      }
+    }
+  }
+  .mobileDetailsDiv {
+    width: 100%;
+    margin: auto;
+    padding: 0 !important;
+    border: 2px solid $text-color-four !important;
+    border-top: none !important;
+
+    h5 {
+      margin: 0;
+      padding: 24px 5% 0 5%;
+      font: normal normal 500 16px/19px Montserrat !important;
+      letter-spacing: 0px;
+      color: $text-color !important;
+    }
+
+    p {
+      text-align: left;
+      font: normal normal normal 16px/19px Montserrat !important;
+      letter-spacing: 0px;
+      color: $text-color !important;
+      padding: 16px 5% 16px 5%;
+    }
+
+    h6 {
+      text-align: left;
+      font: normal normal 600 16px/19px Montserrat !important;
+      letter-spacing: 0px;
+      color: $text-color;
+      padding-left: 5%;
+      border-radius: 0 !important;
+      height: 48px;
+      padding-top: 14px;
+    }
+  }
+}

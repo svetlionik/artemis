@@ -1,0 +1,28 @@
+version: 0.2
+
+          
+phases:
+  install:
+    runtime-versions:
+      nodejs: 12
+
+  pre_build:
+    commands:
+      - echo Setting app environment variables..
+      - export $(echo $secret | jq -r '. | to_entries | .[] | .key + "=" + (.value | @sh)' | xargs)
+      - echo List directory files...
+      - ls
+      - echo Build started on `date`
+      - npm install npm@6.14.15 -g
+      - echo Installing source NPM dependencies...
+      - npm install
+  build:
+    commands:
+      - echo List active directory...
+      - ls
+      - echo running version check on npm
+      - npm run build --production
+  post_build:
+    commands:
+      - ls ./build
+      - aws s3 sync ./build s3://$target_bucket

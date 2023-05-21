@@ -1,0 +1,57 @@
+@import 'custom.scss';
+
+$timer-background-color: #f7f7f7;
+
+.timer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: $timer-background-color 0% 0% no-repeat padding-box;
+  border-radius: 2px;
+  opacity: 1;
+  height: 40px;
+  width: 128px;
+  margin: auto;
+
+  .timeIcon {
+    width: 24px;
+    height: 24px;
+    margin-top: 8px;
+    margin-left: 16px;
+  }
+
+  h4 {
+    font: normal normal 600 16px/22px Montserrat;
+    letter-spacing: 0px;
+    color: #3e3e3e;
+    opacity: 1;
+    margin: 0 auto 0 8px;
+    padding-top: 9px;
+  }
+}
+
+.warning {
+  border: 2px solid $warning;
+  background: $warning-light 0% 0% no-repeat padding-box;
+  border-radius: 2px;
+}
+
+.danger {
+  border: 2px solid $danger;
+  background: $danger-light 0% 0% no-repeat padding-box;
+  border-radius: 2px;
+}
+
+@media screen and (max-width: 768px) {
+  .timer {
+    margin-top: 8px;
+    .timeIcon {
+      margin-top: 6px;
+      margin-left: 16px;
+    }
+
+    h4 {
+      padding-top: 7px;
+    }
+  }
+}

@@ -1,0 +1,141 @@
+@import 'custom.scss';
+
+$practical: #f2e7fd;
+$practical-border: #643695;
+
+.tech {
+  .infoText {
+    @include textCustomNew(normal, 16px, 19px, $text-color-two, left);
+    padding-top: 24px;
+    padding-bottom: 16px;
+    margin-bottom: 0;
+  }
+
+  .techGrid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    padding-bottom: 24px;
+    gap: 4px;
+
+    .card {
+      max-width: 277px;
+      width: auto;
+      height: 51px;
+      background-color: $text-color-five;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 4px 0px;
+      border-radius: 8px;
+
+      h5 {
+        @include smLeftTextBold($text-color);
+        margin: auto auto auto 24px;
+      }
+
+      svg {
+        width: 24px;
+        height: 24px;
+        margin: auto 12px;
+      }
+    }
+    .card.activeCard {
+      cursor: pointer;
+      border: 2px solid $warning !important;
+      background: $warning-light 0% 0% no-repeat padding-box !important;
+      &:hover {
+        box-shadow: 0px 0px 10px $warning !important;
+        svg {
+          color: $warning !important;
+        }
+      }
+    }
+    .card.inactiveCard {
+      cursor: pointer;
+      border: 2px solid $text-color-four;
+      background: $secondary 0% 0% no-repeat padding-box;
+      &:hover {
+        box-shadow: 0px 0px 10px $primary;
+        svg {
+          color: $primary;
+        }
+      }
+    }
+    .card.passedCard {
+      pointer-events: none;
+      border: 2px solid $primary;
+      background: $primary-two 0% 0% no-repeat padding-box;
+    }
+    .card.practicalCard {
+      cursor: pointer;
+      border: 2px solid $practical-border;
+      background: $practical 0% 0% no-repeat padding-box;
+      svg {
+        color: $text-color;
+        fill: currentColor;
+        margin: 11px 12px auto 12px;
+      }
+      &:hover {
+        box-shadow: 0px 0px 10px $practical-border;
+      }
+    }
+  }
+  .cardLength {
+    display: none;
+  }
+  .more {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 988px) {
+  .tech {
+    .infoText {
+      padding-top: 16px;
+      padding-bottom: 0px;
+      margin-bottom: 0;
+    }
+
+    .techGrid {
+      display: grid;
+      gap: 0;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      min-height: 60px;
+      height: auto;
+      max-height: 178px;
+      overflow: hidden;
+
+      .card {
+        max-width: 100%;
+        border-radius: 8px;
+        margin: 4px;
+
+        h5 {
+          @include smLeftTextBold($text-color);
+          margin: auto auto auto 24px;
+        }
+
+        img {
+          width: 24px;
+          height: 24px;
+          margin: auto 24px;
+        }
+      }
+    }
+    .expand.techGrid {
+      height: auto;
+      max-height: 100vh;
+    }
+
+    .cardLength {
+      display: block;
+      @include textCustomNew(normal, 12px, 15px, $text-color-three, center);
+      padding-top: 16px;
+    }
+
+    .more {
+      display: block;
+      @include textCustomNew(normal, 14px, 18px, $text-color, center);
+    }
+  }
+}

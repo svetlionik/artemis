@@ -1,0 +1,68 @@
+@import 'custom.scss';
+
+.offlineMap {
+  span {
+    display: flex;
+    flex-direction: row;
+    p {
+      @include textCustomNew(normal, 16px, 19px, $primary, left);
+      padding: 4px 8px;
+    }
+  }
+  span:nth-child(1) {
+    padding: 16px 8px 4px 0px;
+  }
+
+  span {
+    display: flex;
+    flex-direction: row;
+    .mail {
+      @include textCustomNew(500, 16px, 22px, $primary, left);
+      padding: 4px 8px;
+    }
+    svg {
+      padding: 0;
+    }
+  }
+
+  span {
+    display: flex;
+    flex-direction: row;
+    .phone {
+      @include textCustomNew(500, 16px, 22px, $text-color, left);
+      padding: 4px 8px;
+      svg {
+        padding: 0;
+      }
+    }
+  }
+  iframe {
+    margin: 24px 0 64px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .offlineMap {
+    img {
+      width: 100%;
+      max-width: 100%;
+      height: 380px;
+    }
+    span {
+      .address {
+        width: calc(100% - 48px);
+      }
+      img {
+        width: 32px;
+        height: 32px;
+        margin: 16px 0px auto 16px;
+        // margin-left: 16px;
+      }
+      svg {
+        margin-left: 16px;
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="phone" transform="translate(7 42) rotate(180)">
+    <rect id="Rectangle_494" data-name="Rectangle 494" width="32" height="32" transform="translate(-25 10)" fill="none"/>
+    <path id="phone-2" data-name="phone" d="M19.23,15.26l-2.54-.29a1.991,1.991,0,0,0-1.64.57l-1.84,1.84a15.045,15.045,0,0,1-6.59-6.59L8.47,8.94A1.991,1.991,0,0,0,9.04,7.3L8.75,4.78A2,2,0,0,0,6.76,3.01H5.03a1.985,1.985,0,0,0-2,2.07A16.992,16.992,0,0,0,18.92,20.97a1.985,1.985,0,0,0,2.07-2V17.24A1.982,1.982,0,0,0,19.23,15.26Z" transform="translate(3.026 38.01) rotate(180)" fill="#2b4591"/>
+  </g>
+</svg>

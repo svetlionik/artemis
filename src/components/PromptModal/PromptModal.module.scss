@@ -1,0 +1,116 @@
+@import 'custom.scss';
+
+.prompt {
+  position: fixed !important;
+  z-index: 99999;
+
+  .modalHeader {
+    display: none;
+  }
+  p {
+    @include xsCenterText($text-color-three);
+    margin-bottom: 0;
+    padding-top: 32px;
+  }
+
+  .body {
+    padding: 0 32px 32px 32px;
+    width: 540px;
+    height: 202px;
+    p {
+      @include mdCenterTextBold($primary);
+      margin-bottom: 0;
+    }
+  }
+
+  .footer {
+    padding: 0 32px 32px 32px;
+    width: 540px;
+    justify-content: flex-end;
+    display: flex;
+
+    .stayBtn {
+      @include twoButtons(
+        $accent,
+        $accent,
+        $accent,
+        $secondary,
+        $accent-hover,
+        $accent-hover
+      );
+      margin: 8px;
+    }
+
+    .leaveBtn {
+      @include twoButtons(
+        $secondary,
+        $secondary,
+        $text-color-four,
+        $text-color-two,
+        $text-color-five,
+        $text-color-four
+      );
+      margin: 8px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .prompt {
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    .modalHeader {
+      display: block;
+      background-color: $primary;
+      color: $secondary;
+
+      p {
+        @include newTextClass(
+          normal normal 600 16px/19px Montserrat,
+          $secondary
+        );
+        margin-bottom: 0;
+        padding: 15px 48px 14px 48px;
+      }
+
+      .arrowIcon {
+        margin: -10px 14px -8px -14px;
+        padding-bottom: 2px;
+      }
+    }
+
+    p {
+      padding-top: 24px;
+    }
+    .body {
+      padding: 64px 24px 0px 24px;
+      width: 100%;
+      p {
+        font: normal normal 500 20px/24px Montserrat;
+        padding-top: 0;
+      }
+    }
+
+    .footer {
+      padding: 0 12px 64px 12px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      .stayBtn {
+        height: 44px;
+        width: 100%;
+        margin: 8px auto 8px auto;
+        order: 2;
+      }
+
+      .leaveBtn {
+        height: 44px;
+        width: 100%;
+        margin: 8px auto 8px auto;
+        order: 1;
+      }
+    }
+  }
+}

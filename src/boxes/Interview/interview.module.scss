@@ -1,0 +1,244 @@
+@import '../../custom.scss';
+
+$passed-background: #f0f4ff;
+
+.divider {
+  background-color: $text-color-four;
+  height: 2px;
+  width: auto;
+  margin: 0px auto 24px auto;
+}
+
+.meetingDetails {
+  padding: 23px 16px 32px 16px;
+  @include xsLeftText($text-color-two);
+
+  img {
+    padding-right: 5px;
+    width: 30px;
+  }
+
+  div {
+    @include xsLeftText($text-color-two);
+  }
+
+  .msTeamsDetails {
+    padding-left: 30px;
+    padding-bottom: 10px;
+  }
+
+  .msLink {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.accountLinks {
+  a {
+    @include xsLeftText($text-color-two);
+  }
+
+  img {
+    padding-right: 5px;
+    width: 30px;
+  }
+}
+
+.hrTitles {
+  padding-left: 8px;
+  vertical-align: middle;
+  margin: auto 0;
+  @include textCustomNew(600, 16px, 19px, $primary, left);
+}
+
+.accountContainer {
+  display: flex;
+  padding: 24px 8px;
+  text-align: left;
+}
+
+.accountPhoto {
+  flex: 0.2;
+
+  img {
+    width: 112px;
+    height: 140px;
+    border: 3px solid $primary;
+    border-radius: 8px;
+  }
+}
+
+.accountDetails {
+  flex: 1;
+  padding-left: 24px;
+
+  .accountName {
+    width: 100%;
+    margin: auto;
+    .name {
+      display: inline-block;
+      @include textCustomNew(600, 16px, 19px, $text-color, left);
+      border-bottom: 2px solid $text-color-four;
+      padding-bottom: 16px;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.expect {
+  li {
+    padding: 0 24px;
+  }
+  li:last-child {
+    padding-bottom: 32px;
+  }
+  :nth-child(1) {
+    padding-bottom: 24px;
+  }
+  :nth-child(2) {
+    padding-top: 0px;
+  }
+  .additional {
+    padding-bottom: 32px;
+  }
+}
+.mobileDetailsDiv {
+  max-width: 820px;
+  width: auto;
+  margin: auto;
+  background: $secondary 0% 0% no-repeat padding-box;
+  border-radius: 0px 0px 5px 5px;
+  padding: 32px 168px 0px 168px !important;
+  border: 2px solid $text-color-four !important;
+  border-top: none !important;
+
+  h5 {
+    padding: 32px 8px 0px 8px;
+    margin: 0;
+    font: normal normal 500 18px/22px Montserrat !important;
+    letter-spacing: 0px;
+    color: $text-color !important;
+  }
+  h6 {
+    background: $passed-background 0% 0% no-repeat padding-box;
+    text-align: left;
+    font: normal normal 600 18px/22px Montserrat !important;
+    letter-spacing: 0px;
+    color: $text-color;
+    border-radius: 5px;
+    padding: 8px;
+    margin: 0;
+    height: 40px;
+  }
+  p {
+    padding: 16px 8px 32px 8px;
+    margin: 0 !important;
+    text-align: left;
+    font: normal normal normal 16px/22px Montserrat !important;
+    letter-spacing: 0px;
+    color: $text-color !important;
+    opacity: 1;
+  }
+
+  h4 {
+    @include textCustomNew(500, 16px, 22px, $text-color, left);
+    padding: 16px 0 0 0;
+    margin-bottom: 0;
+    text-decoration: underline;
+  }
+
+  li {
+    @include textCustomNew(normal, 16px, 22px, $text-color-two, left);
+    padding: 8px 0 0 12px;
+  }
+}
+@media only screen and (max-width: 988px) {
+  .hrTitles {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .accountContainer {
+    padding: 24px 16px;
+    flex-direction: column;
+  }
+
+  .expect {
+    li {
+      padding: 2px 16px 2px 28px;
+    }
+    li:last-child {
+      padding-bottom: 16px;
+    }
+    .additional {
+      padding-bottom: 16px;
+    }
+  }
+  .mobileDetailsDiv {
+    width: 100%;
+    margin: auto;
+    padding: 0 !important;
+    border: 2px solid $text-color-four !important;
+    border-top: none !important;
+
+    h5 {
+      margin: 0;
+      padding: 24px 5% 0 5%;
+      font: normal normal 500 16px/19px Montserrat !important;
+      letter-spacing: 0px;
+      color: $text-color !important;
+    }
+
+    p {
+      text-align: left;
+      font: normal normal normal 16px/19px Montserrat !important;
+      letter-spacing: 0px;
+      color: $text-color !important;
+      padding: 16px 5% 16px 5%;
+    }
+
+    h6 {
+      text-align: left;
+      font: normal normal 600 16px/19px Montserrat !important;
+      letter-spacing: 0px;
+      color: $text-color;
+      padding-left: 5%;
+      border-radius: 0 !important;
+      height: 48px;
+      padding-top: 14px;
+    }
+  }
+
+  .accountLinks {
+    div:first-child {
+      padding-bottom: 14px;
+    }
+
+    a {
+      @include textCustomNew(normal, 14px, 14px, $text-color-two, left);
+      display: inline-block;
+      width: 85%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    img {
+      padding-right: 5px;
+      width: 32px;
+    }
+  }
+
+  .accountName {
+    padding-left: 5px;
+
+    .nameDivider {
+      margin-top: 16px;
+      margin-bottom: 8px;
+    }
+  }
+  .accountDetails {
+    padding-left: 0px;
+    padding-top: 24px;
+  }
+}

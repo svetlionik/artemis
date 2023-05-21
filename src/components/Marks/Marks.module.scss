@@ -1,0 +1,152 @@
+@import '../../custom.scss';
+.marks {
+  height: 100%;
+  overflow: auto;
+  .header {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    border-bottom: none;
+    h4 {
+      text-align: center;
+      font: normal normal 500 24px/29px Montserrat;
+      letter-spacing: 0px;
+      color: $primary;
+      opacity: 1;
+      margin-bottom: 2px;
+      padding-top: 34px;
+    }
+    h6 {
+      text-align: center;
+      font: normal normal normal 16px/19px Montserrat;
+      letter-spacing: 0px;
+      color: $text-color-three;
+      opacity: 1;
+      margin-bottom: 0;
+    }
+  }
+
+  .body {
+    padding: 34px 64px 12px 64px;
+    .circle {
+      font: normal normal 500 16px/19px Montserrat;
+      letter-spacing: 0px;
+      color: $primary;
+      opacity: 1;
+      width: 32px;
+      height: 32px;
+      border: 2px solid $primary;
+      border-radius: 50%;
+      text-align: center;
+      padding-top: 4px;
+      margin-right: 22px;
+      margin-top: 4px;
+    }
+    .rowTitle {
+      text-align: left;
+      font: normal normal 500 18px/22px Montserrat;
+      letter-spacing: 0px;
+      color: $primary;
+      opacity: 1;
+      padding-left: 22px;
+    }
+    .rowMessage {
+      text-align: left;
+      font: normal normal normal 16px/19px Montserrat;
+      letter-spacing: 0px;
+      color: $text-color;
+      opacity: 1;
+      padding-bottom: 32px;
+      padding-left: 22px;
+    }
+  }
+  .okayBtn {
+    background: $accent 0% 0% no-repeat padding-box;
+    border-radius: 2px;
+    opacity: 1;
+    width: 192px;
+    height: 40px;
+    border: none;
+    font: normal normal 600 16px/19px Montserrat;
+    letter-spacing: 0px;
+    color: $secondary;
+    margin: 8px auto 27px auto;
+    &:hover {
+      background: $accent-hover 0% 0% no-repeat padding-box;
+      border-radius: 2px;
+      opacity: 1;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .marks {
+    height: auto;
+    overflow: auto;
+
+    .header {
+      h4 {
+        text-align: center;
+        font: normal normal 600 24px/29px Montserrat;
+        letter-spacing: 0px;
+        color: $primary;
+        opacity: 1;
+        margin-bottom: 8px;
+        padding-top: 32px;
+      }
+      h6 {
+        text-align: center;
+        font: normal normal normal 16px/19px Montserrat;
+        letter-spacing: 0px;
+        color: $text-color-three;
+        opacity: 1;
+        margin-bottom: 0;
+      }
+    }
+
+    .body {
+      padding: 40px 24px 24px 24px;
+      .circle {
+        margin-top: 2px;
+      }
+    }
+    .okayBtn {
+      border-radius: 4px;
+      opacity: 1;
+      width: 303px;
+      height: 40px;
+      margin: 8px auto 27px auto;
+    }
+  }
+}
+.row {
+  margin: 0 !important;
+  thead {
+    background: $primary 0% 0% no-repeat padding-box;
+    border-radius: 0px;
+    opacity: 1;
+    th {
+      padding: 0;
+      text-align: left;
+      font: normal normal 600 16px/19px Montserrat;
+      letter-spacing: 0px;
+      color: $secondary;
+      opacity: 1;
+      height: 48px;
+      border-bottom: none;
+
+      p {
+        padding: 15px 48px 14px 48px;
+        margin-bottom: 0;
+      }
+
+      .arrowIcon {
+        margin: -10px 14px -8px -14px;
+        padding-bottom: 2px;
+      }
+    }
+  }
+}

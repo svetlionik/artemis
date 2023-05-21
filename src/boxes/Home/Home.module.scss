@@ -1,0 +1,95 @@
+@import '../../custom.scss';
+
+$border-color: #f6f6f6;
+$background-second-color: #e2e5de;
+$step-shadow: #f6b40033;
+
+// home page
+.home {
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  min-height: 90vh;
+  height: auto;
+
+  .information {
+    width: 900px;
+    margin: auto;
+
+    h1 {
+      @include newTextClass(normal normal 600 32px/39px Montserrat, $primary);
+      text-align: center;
+      padding-top: 180px;
+      margin-bottom: 34px;
+    }
+
+    p {
+      @include newTextClass(
+        normal normal normal 22px/32px Montserrat,
+        $text-color-two
+      );
+      text-align: center;
+      padding-top: 0px;
+      margin-bottom: 30px;
+      margin-inline: 20px;
+
+      // &:last-child {
+      //   margin-top: 36px;
+      //   text-align: center;
+      //   font: normal normal normal 16px/19px Montserrat;
+      //   letter-spacing: 0px;
+      //   color: $text-color-two;
+      //   opacity: 1;
+      // }
+    }
+
+    .navigatorContainer {
+      display: flex;
+      flex: 1;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    min-height: 90vh;
+    height: auto;
+
+    .information {
+      width: auto;
+      margin: auto;
+
+      h1 {
+        @include newTextClass(normal normal 600 32px/39px Montserrat, $primary);
+        text-align: center;
+        padding-top: 48px;
+        margin-bottom: 34px;
+      }
+
+      p {
+        @include newTextClass(
+          normal normal normal 16px/19px Montserrat,
+          $text-color-two
+        );
+        text-align: center;
+        padding-top: 0px;
+        margin-bottom: 0;
+        margin-top: 36px;
+
+        &:last-child {
+          text-align: center;
+          font: normal normal normal 16px/19px Montserrat;
+          letter-spacing: 0px;
+          opacity: 1;
+          color: $text-color-two;
+        }
+      }
+    }
+  }
+}

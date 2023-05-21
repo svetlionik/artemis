@@ -1,0 +1,71 @@
+{
+  "PERSONAL_DOCUMENTS": {
+    "name": "Personal documents",
+    "documentTypes": {
+      "PASSPORT": {
+        "name": "International Passport",
+        "description": "Scanned copy of valid passport.",
+        "documents": [
+          {
+            "documentId": "asd",
+            "fileExtension": "jpg",
+            "mediaType": "jpg",
+            "fileName": "test"
+          },
+          {
+            "documentId": "asd",
+            "fileExtension": "jpg",
+            "mediaType": "jpg",
+            "fileName": "test"
+          },
+          {
+            "documentId": "asd",
+            "fileExtension": "jpg",
+            "mediaType": "jpg",
+            "fileName": "test"
+          }
+        ]
+      },
+      "PERSONAL_PHOTO": {
+        "name": "Personal photo",
+        "description": null,
+        "documents": []
+      }
+    }
+  },
+  "ACADEMIC_DOCUMENTS": {
+    "name": "Academic documents",
+    "documentTypes": {
+      "DIPLOMA": {
+        "name": "Diploma for last completed education",
+        "description": "Scanned copy of last completed diploma.",
+        "documents": []
+      },
+      "TRANSCRIPT": {
+        "name": "Transcript of grades",
+        "description": "Scanned copy of transcript of diploma with grades.",
+        "documents": []
+      }
+    }
+  },
+  "PROOF_OF_EXPERIENCE": {
+    "name": "Proof of experience",
+    "documentTypes": {
+      "WORK_EXPERIENCE_OR_SOCIAL_SECURITY": {
+        "name": "Work experience letter / social security",
+        "description": "Letter for proving the work experience on the field or social security description.",
+        "documents": []
+      }
+    }
+  },
+  "PROOF_OF_CLEAR_RECORD": {
+    "name": "Proof of clear record",
+    "documentTypes": {
+      "POLICE_CLEARANCE_CERTIFICATE": {
+        "name": "Police clearance",
+        "description": "Police clearance report issued no later than 6 months to proving the clear records.",
+        "documents": []
+      }
+    }
+  }
+}

@@ -1,0 +1,312 @@
+@import 'custom.scss';
+
+$border-color: #f6f6f6;
+$background-second-color: #e2e5de;
+$step-shadow: #f6b40033;
+
+// Fill in question
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    @include mdLeftTextBold($primary);
+    margin-top: 79px;
+  }
+
+  .subtitle {
+    @include smLeftText($text-color);
+    border-top: none;
+    padding: 16px 0 16px 16px;
+  }
+
+  img {
+    border-top: none !important;
+    padding-bottom: 24px;
+    width: 450px;
+  }
+
+  .description {
+    border-top: none;
+    border-bottom: 2px solid $text-color-four;
+    padding-bottom: 12px;
+    padding-left: 16px;
+  }
+
+  p {
+    @include smLeftTextBold($text-color);
+    margin-bottom: 16px;
+  }
+
+  input,
+  textarea {
+    @include smLeftText($text-color);
+    border: none;
+    border-bottom: 1px solid $text-color-three;
+    width: 100%;
+    resize: none;
+    padding-top: 24px;
+  }
+
+  .smallWidth {
+    width: 25%;
+  }
+}
+
+// Select option from list
+.table {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  form {
+    border-top: none !important;
+    margin: 0px;
+  }
+
+  .title {
+    @include mdLeftTextBold($primary);
+    margin-top: 79px;
+  }
+
+  .subtitle {
+    @include smLeftText($text-color);
+    border-top: none;
+    padding: 16px 0 16px 16px;
+  }
+
+  .description {
+    border-top: none;
+    padding-bottom: 12px;
+    border-bottom: 2px solid $text-color-four;
+    padding-left: 16px;
+  }
+
+  img {
+    border-top: none !important;
+    padding-bottom: 24px;
+    width: 450px;
+  }
+
+  .radioGroup {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid $text-color-four;
+    margin: 8px 8px 8px 0px;
+    border-radius: 4px;
+
+    &:hover {
+      border: 2px solid $primary;
+      background-color: $primary-two;
+
+      input[type='radio'] + span {
+        border: 2px solid $primary;
+        background-color: $primary;
+      }
+    }
+
+    label {
+      display: flex;
+      flex-direction: row;
+      padding: 12px 24px 12px 16px;
+      // margin: 8px;
+
+      input[type='radio'] {
+        display: none;
+
+        + span {
+          width: 24px;
+          height: 24px;
+          border: 1px solid $text-color-three;
+          background-color: $secondary;
+          flex-shrink: 0;
+          background-image: url('/images/radio_1.svg');
+          background-position: center;
+          background-repeat: no-repeat;
+
+          &.multipleChoice {
+            border-radius: 4px;
+            background-image: url('/images/check_box.svg');
+          }
+        }
+
+        &.checked + span {
+          background-color: $primary;
+          border: 1px solid $primary;
+
+          &:not(:checked) + span {
+            background-color: $secondary;
+          }
+        }
+
+        .notChecked + span {
+          border: 1px solid $text-color-three;
+          background-color: $secondary;
+          flex-shrink: 0;
+        }
+
+        &.clicked + span {
+          background-color: $primary;
+        }
+
+        &.selected + span {
+          background-color: $secondary;
+        }
+
+        &:hover + span {
+          background-color: $primary !important;
+          border: 1px solid $primary !important;
+        }
+      }
+
+      p {
+        padding-left: 8px;
+        vertical-align: middle;
+        margin: auto 0;
+        @include textCustomNew(500, 16px, 19px, $text-color, left);
+      }
+
+      .clicked {
+        background-color: $primary;
+      }
+    }
+  }
+
+  .checked {
+    background-color: $primary-two;
+    border: 2px solid $primary;
+  }
+
+  .clicked {
+    border: 2px solid $primary;
+    background-color: $primary-two;
+
+    .radioSpan {
+      background-color: $primary;
+    }
+
+    label {
+      span {
+        background-color: $primary !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1095px) {
+  .inputGroup {
+    margin-top: 32px;
+
+    .title {
+      padding-bottom: 16px;
+      margin-top: 32px;
+      font: normal normal 500 16px/19px Montserrat;
+    }
+
+    .subtitle {
+      padding: 16px 0 16px 0;
+    }
+
+    .description {
+      border-bottom: 2px solid $text-color-four;
+      padding-bottom: 24px;
+    }
+
+    img {
+      border-top: none;
+      width: 80vw;
+    }
+
+    p {
+      font: normal normal 500 16px/19px Montserrat;
+      margin-bottom: 40px;
+    }
+
+    input,
+    textarea {
+      padding-top: 0px;
+      opacity: 1;
+      width: 304px;
+      height: 25px;
+    }
+
+    .smallWidth {
+      width: 304px;
+    }
+  }
+
+  .table {
+    margin-top: 0px;
+
+    .title {
+      margin-top: 32px;
+      padding-bottom: 16px;
+      font: normal normal 500 16px/19px Montserrat;
+    }
+
+    .subtitle {
+      padding: 16px 0 16px 0;
+      border: none;
+    }
+
+    .description {
+      border-top: none;
+      border-bottom: 2px solid $text-color-four;
+      padding-bottom: 24px;
+    }
+    img {
+      width: 80vw;
+      border-top: none;
+    }
+
+    form {
+      border-top: none !important;
+    }
+    .radioGroup {
+      border: 2px solid $text-color-four;
+      margin: 8px 0px;
+      justify-content: flex-start;
+
+      label {
+        padding: 12px 24px 12px 12px;
+        margin: 0px;
+        border-radius: 2px;
+
+        input[type='radio'] {
+          display: none;
+
+          + span {
+            border: 2px solid $text-color-three;
+            background-color: $secondary;
+            flex-shrink: 0;
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+          }
+
+          &.checked + span {
+            border: 2px solid $primary;
+          }
+
+          &:hover + span {
+            border: 2px solid $primary !important;
+          }
+        }
+
+        p {
+          padding-left: 0px;
+          margin-left: 8px;
+        }
+      }
+    }
+
+    .checked {
+      background-color: $primary-two;
+      border: 2px solid $primary;
+    }
+
+    .clicked {
+      border: 2px solid $primary;
+    }
+  }
+}

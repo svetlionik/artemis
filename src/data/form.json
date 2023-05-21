@@ -1,0 +1,122 @@
+{
+  "form": {
+    "general": [
+      {
+        "id": "0asdqwead",
+        "val": 0,
+        "name": "-",
+        "isChecked": "0",
+        "title": "None",
+        "msg": "You may know what the abbreviation means, but you do not know anything further."
+      },
+      {
+        "id": "1asdasedqeasd",
+        "val": 1,
+        "name": "1",
+        "isChecked": "1",
+        "title": "Theoretical knowledge",
+        "msg": "You have read materials, but have no practical experience."
+      },
+      {
+        "id": "2sadasdqweawsd",
+        "val": 2,
+        "name": "2",
+        "isChecked": "2",
+        "title": "Some experience",
+        "msg": "Some practical experience - self-practice or small project."
+      },
+      {
+        "id": "3asdasdsadq2e",
+        "val": 3,
+        "name": "3",
+        "isChecked": "3",
+        "title": "Significant experience",
+        "msg": "One or two projects at a minimum, in which the technology has been applied extensively."
+      },
+      {
+        "id": "4asdasdawe2asd",
+        "val": 4,
+        "name": "4",
+        "isChecked": "4",
+        "title": "Expertise",
+        "msg": "Strong experience in the field - you can teach other team members in the field."
+      },
+      {
+        "id": "5asdasdsadwae",
+        "val": 5,
+        "name": "5",
+        "isChecked": "5",
+        "title": "Advanced skills",
+        "msg": "Very strong experience in the field - Guru, Master or God (one of these is enough)."
+      }
+    ],
+    "expand": [
+      {
+        "id": "6asdasdasdasd",
+        "val": "yes",
+        "name": "Yes",
+        "isChecked": "yes",
+        "msg": "Select this option to view more detailed form"
+      },
+      {
+        "id": "7asdasdasdasd",
+        "val": "no",
+        "name": "No",
+        "isChecked": "no",
+        "msg": "Skip this part and continue to next page"
+      }
+    ],
+    "experience": [
+      {
+        "id": "0asdqweadqwerty",
+        "val": 0,
+        "name": "<1",
+        "isChecked": "0",
+        "title": "Less than a year",
+        "msg": "Less than a year"
+      },
+      {
+        "id": "1asdasedqeasdqwerty",
+        "val": 1,
+        "name": "1-3",
+        "isChecked": "1",
+        "title": "1 to 3 years",
+        "msg": "1 to 3 years"
+      },
+      {
+        "id": "2sadasdqweawsdqwerty",
+        "val": 2,
+        "name": "3+",
+        "isChecked": "2",
+        "title": "More than 3 years",
+        "msg": "More than 3 years"
+      }
+    ],
+    "experienceUIUX": [
+      {
+        "id": "0asdqweadqwerty",
+        "val": 0,
+        "name": "1",
+        "isChecked": "0",
+        "title": "One year",
+        "msg": "One year"
+      },
+      {
+        "id": "1asdasedqeasdqwerty",
+        "val": 1,
+        "name": "2",
+        "isChecked": "1",
+        "title": "Two years",
+        "msg": "Two years"
+      },
+      {
+        "id": "2sadasdqweawsdqwerty",
+        "val": 2,
+        "name": "3+",
+        "isChecked": "2",
+        "title": "More than 3 years",
+        "msg": "More than 3 years"
+      }
+    ]
+  }
+}

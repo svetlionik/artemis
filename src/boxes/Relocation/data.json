@@ -1,0 +1,26 @@
+{
+  "PROVIDING_DOCUMENTS": {
+    "createdAt": "2023-05-03T15:00:00.000",
+    "completedAt": "2023-05-10T15:00:00.000",
+    "relocationStep": "PROVIDING_DOCUMENTS",
+    "status": "PASSED"
+  },
+  "CONTRACT": {
+    "createdAt": "2023-05-10T15:00:00.000",
+    "completedAt": "2023-05-15T15:00:00.000",
+    "relocationStep": "CONTRACT",
+    "status": "PASSED"
+  },
+  "MIGRATION_PROCESS": {
+    "createdAt": "2023-05-15T15:00:00.000",
+    "completedAt": "2023-06-13T15:00:00.000",
+    "relocationStep": "MIGRATION_PROCESS",
+    "status": "PASSED"
+  },
+  "VISA": {
+    "createdAt": "2023-06-13T15:00:00.000",
+    "completedAt": "2023-06-30T15:00:00.000",
+    "relocationStep": "VISA",
+    "status": "PASSED"
+  }
+}

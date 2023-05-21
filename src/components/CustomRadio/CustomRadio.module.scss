@@ -1,0 +1,144 @@
+@import "../../custom.scss";
+// new label and input
+label {
+  position: relative;
+  cursor: pointer;
+}
+label [type="radio"] {
+  display: none;
+}
+.hovered {
+  background-color: $accent;
+  border-color: $accent;
+  color: $secondary;
+  &:hover {
+    background-color: $accent;
+    border-color: $accent;
+    color: $secondary;
+  }
+}
+.notHovered {
+  background: $text-color-five 0% 0% no-repeat padding-box !important;
+  border: 2px solid $text-color-four !important;
+  opacity: 1;
+  color: $text-color-four !important;
+}
+[type="radio"] + span {
+  display: inline-block;
+  border: 2px solid $primary;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  padding-top: 4px;
+  font: normal normal 500 16px/19px Montserrat;
+  letter-spacing: 0px;
+  color: $primary;
+}
+:checked + span {
+  background-color: $accent;
+  border-color: $accent;
+  color: $secondary;
+}
+@media screen and (min-width: 768px) and (max-width: 995px) {
+  // new label and input
+  label {
+    position: relative;
+    cursor: pointer;
+  }
+  label [type="radio"] {
+    display: none;
+  }
+  .hovered {
+    background-color: $accent;
+    border-color: $accent;
+    color: $secondary;
+    &:hover {
+      background-color: $accent;
+      border-color: $accent;
+      color: $secondary;
+    }
+  }
+  .notHovered {
+    background: $text-color-five 0% 0% no-repeat padding-box !important;
+    border: 2px solid $text-color-four !important;
+    opacity: 1;
+    color: $text-color-four !important;
+  }
+  [type="radio"] + span {
+    display: inline-block;
+    border: 2px solid $primary;
+    border-radius: 50%;
+    width: 44px !important;
+    height: 44px;
+    text-align: center;
+    padding-top: 4px;
+    font: normal normal 500 16px/19px Montserrat;
+    letter-spacing: 0px;
+    color: $primary;
+  }
+  :checked + span {
+    background-color: $accent;
+    border-color: $accent;
+    color: $secondary;
+  }
+}
+@media only screen and (max-width: 767px) {
+  // new label and input
+  label {
+    position: relative;
+    cursor: pointer;
+  }
+  label [type="radio"] {
+    display: none;
+  }
+  .hovered {
+    background-color: $accent;
+    border-color: $accent;
+    color: $secondary;
+    &:hover {
+      background-color: $accent;
+      border-color: $accent;
+      color: $secondary;
+    }
+  }
+  .notHovered {
+    background: $text-color-five 0% 0% no-repeat padding-box !important;
+    border: 2px solid $text-color-four !important;
+    opacity: 1;
+    color: $text-color-four !important;
+  }
+  [type="radio"] + span {
+    display: inline-block;
+    border: 2px solid $primary;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    padding-top: 4px;
+    font: normal normal 500 16px/19px Montserrat;
+    letter-spacing: 0px;
+    color: $primary;
+  }
+  :checked + span {
+    background-color: $accent;
+    border-color: $accent;
+    color: $secondary;
+  }
+}
+
+@media print {
+  label [type="radio"] {
+    display: none;
+  }
+
+  [type="radio"] + span {
+    border: 2px solid $text-color-four;
+    color: $text-color-four;
+  }
+  :checked + span {
+    background-color: $accent;
+    border-color: $accent;
+    color: $secondary;
+  }
+}

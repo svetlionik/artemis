@@ -1,0 +1,120 @@
+@import "../../custom.scss";
+
+$dropdown-menu-color: navy;
+.dropdownMenu {
+  height: 40px;
+  padding: 8px 0 15px 0;
+  .dropdownButton {
+    width: auto;
+    min-width: 150px;
+    padding: 0;
+    text-align: right;
+    margin: 0;
+    background-color: transparent;
+    color: $dropdown-menu-color;
+    border: none;
+    box-shadow: none;
+    &:hover {
+      cursor: pointer;
+    }
+    &:active {
+      box-shadow: none;
+    }
+
+    span {
+      vertical-align: middle;
+      min-width: 100px;
+      width: auto;
+    }
+    .arrowIcon {
+      fill: currentColor !important;
+      display: inline-block;
+      color: $primary !important;
+      padding-left: 8px;
+    }
+
+    .userIcon {
+      margin-top: -2px;
+      align-content: center;
+      padding-right: 16px;
+      color: $primary !important;
+    }
+  }
+
+  .menu {
+    position: absolute;
+    right: 0px;
+    text-decoration: none;
+    width: 200px;
+    height: auto;
+    background-color: $secondary;
+    border: 2px solid $primary;
+    margin-top: 6px;
+    z-index: 9999;
+
+    .link {
+      width: 156px;
+    }
+
+    p {
+      text-decoration: none;
+      text-align: left;
+      font: normal normal 500 14px/18px Montserrat;
+      letter-spacing: 0px;
+      color: $text-color-two;
+      opacity: 1;
+      width: 100%;
+      padding: 5px 10px 5px 10px;
+      vertical-align: middle;
+      margin: auto;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .arrowMenu {
+      position: absolute;
+      margin: auto;
+      top: -7px;
+      right: 11px;
+      width: 11px;
+      height: 11px;
+      transform: rotate(225deg);
+      -webkit-transform: rotate(225deg);
+      -moz-transform: rotate(225deg);
+      -o-transform: rotate(225deg);
+      -ms-transform: rotate(225deg);
+      border-right: 2px solid $primary;
+      border-bottom: 2px solid $primary;
+      background: $secondary;
+    }
+  }
+}
+
+@media print {
+  .dropdownMenu {
+    .dropdownButton {
+      width: 160px;
+      padding: 0;
+
+      span {
+        padding-top: auto;
+        padding-left: 24px;
+        vertical-align: middle;
+        font-size: 1.5em;
+      }
+      .arrowIcon {
+        display: none;
+      }
+
+      .userIcon {
+        display: none;
+      }
+    }
+
+    .menu {
+      display: none;
+    }
+  }
+}

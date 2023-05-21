@@ -1,0 +1,238 @@
+@import '../../custom.scss';
+
+$navbar-border: #dfe3ef;
+$navbar-link: #041c67;
+$navbar-background-color: #001a65;
+
+.disclaimerContainer {
+  text-align: center;
+  background-color: $warning-light;
+  max-width: 100% !important;
+  padding: 15px;
+  margin-bottom: 8px;
+}
+
+.disclaimerBody {
+  margin: 0;
+}
+
+.navbar {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: $secondary !important;
+  height: 60px;
+  padding-bottom: 0;
+  padding-top: 0;
+  border-bottom: 3px solid $navbar-border;
+  display: table !important;
+
+  .menuButton {
+    width: 32px;
+    height: 32px;
+  }
+  .container {
+    width: 100%;
+    padding: 0 !important;
+    background-color: $secondary;
+  }
+}
+
+.firstRow {
+  height: 10%;
+  align-items: end;
+  color: $secondary !important;
+
+  .closeIconWrapper {
+    width: 80%;
+  }
+
+  p {
+    font: normal normal normal 16px/19px Montserrat;
+    letter-spacing: 0px;
+    color: $secondary !important;
+    opacity: 1;
+    padding-right: 20px !important;
+    float: right;
+
+    .closeIcon {
+      color: $secondary !important;
+      height: 24px;
+      width: 24px;
+      margin-right: 5px;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  width: 80%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
+  color: $secondary !important;
+
+  .navLink {
+    min-height: 44px !important;
+    border-bottom: 2px solid $navbar-link;
+    vertical-align: middle;
+    padding-bottom: 8px;
+    padding-top: 8px;
+
+    .links {
+      color: $secondary;
+      font: normal normal normal 18px/22px Montserrat;
+    }
+  }
+}
+
+.thirdRow {
+  height: auto;
+  padding-top: 200px;
+  margin: auto;
+
+  p {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+    color: $secondary;
+    font: normal normal normal 18px/22px Montserrat;
+  }
+
+  h6 {
+    font: normal normal normal 16px/19px Montserrat;
+    letter-spacing: 0px;
+    width: 80%;
+    margin: auto;
+    color: $secondary;
+    border-bottom: 2px solid $navbar-link;
+    padding-top: 10px;
+    height: 44px;
+    padding-bottom: 8px;
+  }
+
+  span {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    color: $secondary;
+    border-bottom: 2px solid $navbar-link;
+    height: 44px;
+
+    .reset {
+      text-decoration: none;
+      color: $secondary;
+      font: normal normal normal 16px/19px Montserrat;
+      letter-spacing: 0px;
+      padding-top: 10px;
+      height: 44px;
+      padding-bottom: 8px;
+    }
+  }
+}
+
+.fourthRow {
+  margin-bottom: 0;
+
+  .textBox {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 16px;
+    padding-top: 16px;
+
+    p {
+      font: normal normal normal 14px/18px Montserrat;
+      letter-spacing: 0px;
+      color: $secondary;
+      margin-bottom: 0;
+    }
+    span {
+      color: $secondary;
+      font: normal normal normal 14px/18px Montserrat;
+      letter-spacing: 0px;
+      display: flex;
+      flex-direction: column;
+      .links {
+        text-decoration: none;
+        color: $secondary;
+        padding: 5px;
+        &:nth-child(1) {
+          padding: 0 5px 8px 0;
+        }
+        &:nth-last-child(1) {
+          padding: 8px 0;
+        }
+      }
+    }
+  }
+}
+
+#offcanvasNavbar {
+  width: 80%;
+  height: auto;
+
+  background-image: url('../../images/background.svg');
+  background-image: url('../../images/background.svg'),
+    linear-gradient(150deg, $primary, $navbar-background-color);
+
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .bgImage {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #offcanvasNavbar {
+    width: 50%;
+    height: auto;
+
+    background-image: url('../../images/background.svg');
+    background-image: url('../../images/background.svg'),
+      linear-gradient(150deg, $primary, $navbar-background-color);
+    object-fit: cover;
+    background-repeat: no-repeat;
+
+    .bgImage {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+@media only screen and (max-height: 500px) {
+  .firstRow {
+    p {
+      padding-right: 8px !important;
+    }
+  }
+  // .navbar {
+  .thirdRow {
+    height: auto;
+    padding-top: 24px !important;
+    margin: auto;
+  }
+  // }
+  #offcanvasNavbar {
+    width: 50%;
+    height: auto;
+
+    background-image: url('../../images/background.svg');
+    background-image: url('../../images/background.svg'),
+      linear-gradient(150deg, $primary, $navbar-background-color);
+    object-fit: cover;
+    background-repeat: no-repeat;
+
+    .bgImage {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

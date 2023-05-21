@@ -1,0 +1,25 @@
+@import './colors.scss';
+
+$theme-colors: (
+  primary: $primary,
+  primary-one: $primary-one,
+  primary-two: $primary-two,
+  accent: $accent,
+  accent-hover: $accent-hover,
+  secondary: $secondary,
+  custom-color-black: $custom-color-black,
+  info: $info,
+  success-light: $success-light,
+  success: $success,
+  warning-light: $warning-light,
+  warning: $warning,
+  danger-light: $danger-light,
+  danger: $danger,
+  text-color: $text-color,
+  text-color-two: $text-color-two,
+  text-color-three: $text-color-three,
+  text-color-four: $text-color-four,
+  text-color-five: $text-color-five,
+);
+
+@import '../node_modules/bootstrap/scss/bootstrap';

@@ -1,0 +1,274 @@
+@import './colors.scss';
+
+@mixin textClass($font, $letter-spacing, $opacity, $background, $color) {
+  font: $font;
+  letter-spacing: $letter-spacing;
+  opacity: $opacity;
+  background: $background;
+  color: $color;
+}
+
+@mixin newTextClass($font, $color) {
+  font: $font;
+  color: $color;
+  opacity: 1;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+@mixin radioBox {
+  padding: 19px 22px 19px 22px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  min-height: 90px;
+  height: auto;
+  align-items: center;
+  vertical-align: middle;
+}
+
+@mixin newButton($background-color, $border-color, $color) {
+  background: $background-color 0% 0% no-repeat padding-box;
+  border: 2px solid $border-color;
+  border-radius: 2px;
+  opacity: 1;
+  width: 192px;
+  height: 40px;
+  text-align: center;
+  font: normal normal 600 16px/19px Montserrat;
+  letter-spacing: 0px;
+  color: $color;
+}
+
+@mixin actionButton($bg-color, $bg-active, $border-color, $bg-hover) {
+  width: 256px;
+  height: 40px;
+  text-align: center;
+  font: normal normal 600 16px/19px Montserrat;
+  letter-spacing: 0px;
+  background: $bg-color 0% 0% no-repeat padding-box;
+  border-radius: 2px;
+  opacity: 1;
+  margin-top: 24px;
+  border: none;
+
+  &:active {
+    background: $bg-active 0% 0% no-repeat padding-box;
+    border-radius: 2px;
+    opacity: 1;
+  }
+
+  &:focus {
+    outline: 1px dashed $border-color;
+    outline-offset: 2px;
+    border-radius: 2px;
+    opacity: 1;
+  }
+
+  &:hover {
+    background: $bg-hover 0% 0% no-repeat padding-box;
+    border-radius: 2px;
+    opacity: 1;
+  }
+}
+
+@mixin newMobileButton {
+  border-radius: 4px;
+  opacity: 1;
+  max-width: 303px;
+  width: auto;
+  min-width: 280px;
+  height: 40px;
+}
+
+@mixin leftRoundCorners {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+@mixin rightRoundCorners {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+@mixin formControl($color, $border, $caret-color, $hover-color, $hover-border) {
+  height: 40px;
+  text-align: left;
+  font: normal normal normal 14px/18px Montserrat;
+  letter-spacing: 0px;
+  color: $color;
+  opacity: 1;
+  background: transparent;
+  border-radius: 2px;
+  border: 1px solid $border;
+  caret-color: $caret-color;
+  border-radius: 2px;
+  opacity: 1;
+  &:active {
+    border: 2px solid $primary;
+    border-radius: 2px;
+    opacity: 1;
+  }
+  &:focus {
+    outline: 2px dashed $primary;
+    outline-offset: 2px;
+    border-radius: 2px;
+    opacity: 1;
+  }
+  &:hover {
+    border: $hover-border solid $hover-color;
+    border-radius: 2px;
+    opacity: 1;
+  }
+}
+
+@mixin xsCenterText($color) {
+  font: normal normal normal 14px/18px Montserrat;
+  color: $color;
+  opacity: 1;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+@mixin smCenterTextBold($color) {
+  font: normal normal 600 16px/19px Montserrat;
+  color: $color;
+  opacity: 1;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+@mixin mdCenterTextBold($color) {
+  font: normal normal 500 20px/24px Montserrat;
+  color: $color;
+  opacity: 1;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+@mixin xsLeftText($color) {
+  font: normal normal normal 14px/18px Montserrat;
+  color: $color;
+  opacity: 1;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+@mixin smLeftTextBold($color) {
+  font: normal normal 500 16px/19px Montserrat;
+  color: $color;
+  opacity: 1;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+@mixin mdLeftTextBold($color) {
+  font: normal normal 500 20px/24px Montserrat;
+  color: $color;
+  opacity: 1;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+@mixin smLeftText($color) {
+  font: normal normal normal 16px/19px Montserrat;
+  color: $color;
+  opacity: 1;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+@mixin mdLeftText($color) {
+  font: normal normal normal 20px/24px Montserrat;
+  color: $color;
+  opacity: 1;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+@mixin textCustom($bold, $size, $color, $align) {
+  font: normal normal $bold #{$size} Montserrat;
+  color: $color;
+  opacity: 1;
+  letter-spacing: 0px;
+  text-align: $align;
+}
+
+@mixin textCustomNew($bold, $size-one, $size-two, $color, $align) {
+  font: normal normal $bold #{$size-one + '/' + $size-two} Montserrat;
+  color: $color;
+  opacity: 1;
+  letter-spacing: 0px;
+  text-align: $align;
+}
+
+@mixin oneButton(
+  $bg-color,
+  $bg-active,
+  $border-color,
+  $bg-hover,
+  $border-hover
+) {
+  width: 192px;
+  height: 40px;
+  text-align: center;
+  font: normal normal 600 16px/19px Montserrat;
+  letter-spacing: 0px;
+  background: $bg-color 0% 0% no-repeat padding-box;
+  border-radius: 2px;
+  opacity: 1;
+  border: none;
+
+  &:focus {
+    background: $bg-active 0% 0% no-repeat padding-box;
+    outline: 1px dashed $border-color;
+    outline-offset: 2px;
+    border-radius: 2px;
+    opacity: 1;
+  }
+
+  &:hover {
+    background: $bg-hover 0% 0% no-repeat padding-box;
+    border: 2px solid $border-hover;
+    border-radius: 2px;
+    opacity: 1;
+  }
+}
+
+@mixin twoButtons(
+  $bg-color,
+  $bg-active,
+  $border-color,
+  $color,
+  $bg-hover,
+  $border-hover
+) {
+  width: 100%;
+  max-width: 256px;
+  height: 40px;
+  text-align: center;
+  font: normal normal 600 16px/19px Montserrat;
+  letter-spacing: 0px;
+  background: $bg-color 0% 0% no-repeat padding-box;
+  border-radius: 2px;
+  border: 2px solid $border-color;
+  color: $color;
+  opacity: 1;
+
+  &:focus {
+    background: $bg-active 0% 0% no-repeat padding-box;
+    outline: 1px dashed $border-color;
+    outline-offset: 2px;
+    border-radius: 2px;
+    opacity: 1;
+  }
+
+  &:hover {
+    background: $bg-hover 0% 0% no-repeat padding-box;
+    border: 2px solid $border-hover;
+    border-radius: 2px;
+    opacity: 1;
+  }
+}
+
+// @import '../node_modules/bootstrap/scss/bootstrap';

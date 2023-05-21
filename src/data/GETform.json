@@ -1,0 +1,31 @@
+{
+  "id": 0,
+  "userId": 10001,
+  "dateOfSubmit": "2021-10-10",
+  "skills": {
+    "general": [
+      {
+        "name": "Algorithms and Data structure",
+        "experience": 2,
+        "years": 0
+      },
+      {
+        "name": "OOP",
+        "experience": 2,
+        "years": 0
+      }
+    ],
+    "programmingLanguages": [
+      {
+        "name": "Java",
+        "experience": 1,
+        "years": 0
+      },
+      {
+        "name": "JavaScript",
+        "experience": 2,
+        "years": 0
+      }
+    ]
+  }
+}

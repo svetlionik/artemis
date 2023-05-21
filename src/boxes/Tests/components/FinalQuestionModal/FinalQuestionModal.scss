@@ -1,0 +1,14 @@
+@media screen and (max-width: 768px) {
+  .modal-dialog {
+    margin: auto 0 !important;
+    padding-top: 60px;
+    opacity: 1;
+    border-radius: 0px !important;
+    .modal-content {
+      width: 100vw !important;
+      height: calc(100vh - 60px) !important;
+      border: none !important;
+      border-radius: 0px !important;
+    }
+  }
+}

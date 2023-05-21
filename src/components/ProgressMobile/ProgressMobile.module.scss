@@ -1,0 +1,47 @@
+@import 'custom.scss';
+
+// mobile progress bar
+@media screen and (max-width: 988px) {
+  .mobileProgressTitle {
+    font-size: 18pt;
+    color: $text-color;
+    padding: 16px 0 16px 0 !important;
+  }
+
+  .mobileActive {
+    width: 100%;
+    display: flex !important;
+    flex-direction: row;
+    margin: auto;
+    position: relative;
+
+    .hide {
+      display: none !important;
+    }
+
+    .left {
+      width: 100px;
+      text-align: left;
+      font: normal normal 600 16px/19px Montserrat;
+      letter-spacing: 0px;
+      color: $text-color;
+      margin: auto;
+      text-align: center;
+    }
+    .current {
+      text-align: left;
+      font: normal normal normal 14px/18px Montserrat;
+      letter-spacing: 0px;
+      color: $text-color;
+      padding-left: 8px;
+    }
+    .currentName {
+      text-align: left;
+      font: normal normal 500 16px/19px Montserrat;
+      letter-spacing: 0px;
+      color: $text-color;
+      padding-top: 4px;
+      padding-left: 8px;
+    }
+  }
+}

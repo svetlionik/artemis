@@ -1,0 +1,143 @@
+@import 'custom.scss';
+
+$border-color: #f6f6f6;
+$background-second-color: #e2e5de;
+$step-shadow: #f6b40033;
+
+.testHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 150px;
+  position: fixed;
+  padding-top: 16px;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  background-color: $secondary;
+  width: 95vw !important;
+
+  .submitButton {
+    @include oneButton(
+      $accent,
+      $accent,
+      $primary,
+      $accent-hover,
+      $accent-hover
+    );
+    margin-right: 40px;
+    margin-left: 16px;
+  }
+
+  .otherInformation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .infoIcon {
+      cursor: pointer;
+      background-color: $text-color-five;
+      padding: 0 8px;
+    }
+
+    span {
+      vertical-align: middle;
+      margin: auto;
+      padding: 0 16px;
+    }
+
+    .answers {
+      width: 142px;
+      display: flex;
+      flex-direction: row;
+      margin: auto;
+      padding: 8px 16px 9px 8px;
+      @include textCustomNew(600, 16px, 22px, $text-color-two, right);
+      background-color: $text-color-five;
+
+      p {
+        padding-right: 8px;
+        margin-bottom: 0px;
+        margin-left: auto;
+      }
+    }
+  }
+
+  .title {
+    .testCode {
+      margin-bottom: 0;
+      padding-top: 8px;
+      @include textCustomNew(600, 16px, 22px, $text-color-two, right);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .testHeader {
+    flex-direction: row;
+    top: 60px;
+    background-color: $secondary;
+    margin: auto;
+
+    .submitButton {
+      border-radius: 4px;
+      margin-right: 0px;
+    }
+
+    .otherInformation {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      padding: 0 10px;
+
+      .testCode {
+        display: none;
+      }
+
+      .infoIcon {
+        margin: auto;
+        order: 1;
+        width: 40px;
+        height: 40px;
+        margin-top: 7px;
+        padding: 8px 8px 8px 8px;
+      }
+
+      span {
+        vertical-align: middle;
+        margin: auto;
+        order: 2;
+        padding: 0px;
+      }
+
+      .answers {
+        order: 3;
+        padding-right: 0px;
+        width: 80%;
+        background-color: $text-color-five;
+        height: 40px;
+        text-align: center;
+        margin: 8px 0px 0px 24px;
+        vertical-align: middle;
+        padding-top: 8px;
+        justify-content: center;
+
+        p {
+          display: none;
+        }
+      }
+
+      .submitButton {
+        order: 4;
+        width: 84vw;
+        margin: 8px auto;
+      }
+    }
+
+    .title {
+      display: none;
+      .testCode {
+        display: none;
+      }
+    }
+  }
+}

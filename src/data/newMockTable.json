@@ -1,0 +1,36 @@
+{
+  "HR": {
+    "type": "HR",
+    "status": "PASSED",
+    "dateTime": "2022-10-27T09:07:11.374",
+    "meetingDetails": {
+      "type": "ONLINE",
+      "url": "teams.url",
+      "id": "ID",
+      "passCode": "1234"
+    }
+  },
+  "STARTED": {
+    "type": "STARTED",
+    "status": "PASSED",
+    "dateTime": "2022-10-27T15:36:56.744843",
+    "meetingDetails": null
+  },
+  "TECHNICAL": {
+    "type": "TECHNICAL",
+    "status": "PASSED",
+    "dateTime": "2022-10-28T09:07:11.374",
+    "meetingDetails": {
+      "type": "ONLINE",
+      "url": "teams.url",
+      "id": "ID",
+      "passCode": "1234"
+    }
+  },
+  "OFFER": {
+    "type": "OFFER",
+    "status": "ACTIVE",
+    "dateTime": "2022-10-28T09:07:11.374",
+    "meetingDetails": null
+  }
+}

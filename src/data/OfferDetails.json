@@ -1,0 +1,32 @@
+{
+  "data": {
+    "salaryDetails": {
+      "salary": "250 BGN",
+      "probationSalary": "150 BGN",
+      "probationMonths": 4,
+      "conditional": false
+    },
+    "benifts": [
+      {
+        "name": "Health Insurance",
+        "description": "We believe health is one of the most important aspects of our lives and we care that our employees know we have it covered. We offer our employees an additional health insurance plan that provides you and your family access to healthcare services, including regular medical checks, organized by the company, because when it comes to health, prevention is the key."
+      },
+      {
+        "name": "Food vouchers",
+        "description": "Each month Musala Soft employees receive food vouchers for the amount of 80 BGN. The vouchers can be used in most chain stores and some restaurants across the country."
+      },
+      {
+        "name": "Baby bonus",
+        "description": "Having a new family member is an exciting time for everyone, however, sometimes it can be very challenging. We support new parents in the company by giving them a Baby Gift Card for the amount of €250 and a little present to enjoy with your baby."
+      },
+      {
+        "name": "Corporate mobile group",
+        "description": "Every employee can join the Musala Soft mobile phone group after the end of your probation period to benefit from the special conditions and discounts."
+      },
+      {
+        "name": "MultiSport Card",
+        "description": "MultiSport Card is an employee benefit program which grants you access to hundreds of different gyms, sports studios and swimming pools across the whole country. It is based on a monthly subscription that allows you to use any facility in the established network."
+      }
+    ]
+  }
+}

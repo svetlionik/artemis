@@ -1,0 +1,69 @@
+@import 'custom.scss';
+
+.benefits {
+  display: flex;
+  flex-direction: column;
+
+  .benefitsCard {
+    height: auto;
+    padding: 24px 8px;
+    border-bottom: 2px solid $text-color-five;
+    &:last-child {
+      border-bottom: none;
+    }
+
+    span {
+      display: flex;
+      flex-direction: row;
+      div {
+        width: 15px;
+        height: 15px;
+        border-radius: 4px;
+        background-color: $primary;
+        margin: 0 !important;
+        margin-top: 2px !important;
+        rotate: 45deg;
+      }
+      h5 {
+        @include textCustomNew(600, 18px, 22px, $primary, left);
+        margin: 0px 8px;
+        display: inline;
+      }
+    }
+
+    p {
+      @include textCustomNew(normal, 16px, 22px, $text-color, left);
+      padding: 16px 0px 0px 24px;
+    }
+  }
+}
+
+@media screen and (max-width: 998px) {
+  .benefits {
+    display: flex;
+    flex-direction: column;
+
+    .benefitsCard {
+      height: auto;
+      width: 95%;
+      margin: auto;
+      span {
+        display: flex;
+        flex-direction: row;
+        div {
+          margin: 14px 16px 0px 0px !important;
+        }
+        h5 {
+          @include textCustomNew(600, 16px, 22px, $primary, left);
+          margin: 12px 12px 0px 0px;
+          padding: 0;
+          display: inline;
+        }
+      }
+
+      p {
+        @include textCustomNew(500, 16px, 22px, $text-color, left);
+      }
+    }
+  }
+}

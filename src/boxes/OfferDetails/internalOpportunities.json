@@ -1,0 +1,77 @@
+{
+  "BG": {
+    "location": "BG",
+    "opportunities": [
+      {
+        "title": "Internal career mobility options",
+        "description": "While you are within the company you may take advantage of a range of short-term development experiences or apply for other positions internally."
+      },
+      {
+        "title": "Knowledge-sharing initiatives",
+        "description": "We organize different knowledge-sharing initiatives where you can learn about modern technologies, develop new skills, or even participate as a speaker and tutor."
+      },
+      {
+        "title": "Employee Referral Program",
+        "description": "Our employees are our most valuable assets and best ambassadors, and we rely very much on referrals. For each successful referral, there are monetary awards. (Conditions apply.)."
+      }
+    ]
+  },
+  "MK": {
+    "location": "MK",
+    "opportunities": [
+      {
+        "title": "Internal career mobility options",
+        "description": "While you are within the company you may take advantage of a range of short-term development experiences or apply for other positions internally."
+      },
+      {
+        "title": "Knowledge-sharing initiatives",
+        "description": "We organize different knowledge-sharing initiatives where you can learn about modern technologies, develop new skills, or even participate as a speaker and tutor."
+      },
+      {
+        "title": "Employee Referral Program",
+        "description": "Our employees are our most valuable assets and best ambassadors, and we rely very much on referrals. For each successful referral, there are monetary awards. (Conditions apply.).",
+        "additional": [
+          "Mid candidate - 1000 EUR",
+          "Senior candidate - 1500 EUR"
+        ]
+      },
+      {
+        "title": "Recognition program",
+        "description": "Our Praise a colleague program allows all employees to be recognized for their achievements by their peers, direct manager, or more senior leaders within the organization."
+      }
+    ]
+  },
+  "Relocation to Sofia": {
+    "location": "RELOCATION",
+    "opportunities": [
+      {
+        "title": "Internal career mobility options",
+        "description": "While you are within the company you may take advantage of a range of short-term development experiences or apply for other positions internally."
+      },
+      {
+        "title": "Knowledge-sharing initiatives",
+        "description": "We organize different knowledge-sharing initiatives where you can learn about modern technologies, develop new skills, or even participate as a speaker and tutor."
+      },
+      {
+        "title": "Employee Referral Program",
+        "description": "Our employees are our most valuable assets and best ambassadors, and we rely very much on referrals. For each successful referral, there are monetary awards. (Conditions apply.)."
+      },
+      {
+        "title": "Corporate mobile phone subscription",
+        "description": "If you like to join our corporate mobile group Musala Soft will cover the subscription plan."
+      }
+    ]
+  },
+  "EG": {
+    "location": "",
+    "opportunities": []
+  },
+  "XK": {
+    "location": "",
+    "opportunities": []
+  },
+  "AL": {
+    "location": "",
+    "opportunities": []
+  }
+}

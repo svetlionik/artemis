@@ -1,0 +1,254 @@
+@import 'custom.scss';
+
+$timer-background-color: #f7f7f7;
+
+.timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: transparent 0% 0% no-repeat padding-box;
+  border-radius: 2px;
+  opacity: 1;
+  width: 288px;
+  margin: auto;
+  height: auto;
+  .timerRow {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: 12px;
+    h5 {
+      border-radius: 50%;
+      border: 2px solid $primary;
+      height: 72px;
+      width: 72px;
+      @include textCustomNew(600, 32px, 42px, $primary, center);
+      margin: auto;
+    }
+    h2 {
+      background: $secondary;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      margin: auto;
+      margin-top: 6px;
+      padding-top: 8px;
+      background-size: 100%;
+    }
+    .eighthHalf {
+      background: conic-gradient(
+        $primary 345deg,
+        $primary-one 346deg,
+        $primary-one 360deg
+      );
+      border: none;
+    }
+    .eighth {
+      background: conic-gradient(
+        $primary 325deg,
+        $primary-one 326deg,
+        $primary-one 360deg
+      );
+      border: none;
+    }
+    .seventhHalf {
+      background: conic-gradient(
+        $primary 300deg,
+        $primary-one 301deg,
+        $primary-one 360deg
+      );
+      border: none;
+    }
+    .seventh {
+      background: conic-gradient(
+        $primary 275deg,
+        $primary-one 276deg,
+        $primary-one 360deg
+      );
+      border: none;
+    }
+    .sixthHalf {
+      background: conic-gradient(
+        $primary 255deg,
+        $primary-one 256deg,
+        $primary-one 360deg
+      );
+      border: none;
+    }
+    .sixth {
+      background: conic-gradient(
+        $primary 235deg,
+        $primary-one 236deg,
+        $primary-one 360deg
+      );
+      border: none;
+    }
+    .fifthHalf {
+      background: conic-gradient(
+        $primary 210deg,
+        $primary-one 211deg,
+        $primary-one 360deg
+      );
+      border: none;
+    }
+    .fifth {
+      background: conic-gradient(
+        $primary 180deg,
+        $primary-one 181deg,
+        $primary-one 360deg
+      );
+      border: none;
+    }
+    .fourthHalf {
+      background: conic-gradient(
+        $primary 162deg,
+        $primary-one 163deg,
+        $primary-one 360deg
+      );
+      border: none;
+    }
+    .fourth {
+      background: conic-gradient(
+        $primary 140deg,
+        $primary-one 141deg,
+        $primary-one 360deg
+      );
+      border: none;
+    }
+    .thirdHalf {
+      background: conic-gradient(
+        $primary 110deg,
+        $primary-one 111deg,
+        $primary-one 360deg
+      );
+      border: none;
+    }
+    .third {
+      background: conic-gradient(
+        $primary 90deg,
+        $primary-one 91deg,
+        $primary-one 360deg
+      );
+      border: none;
+    }
+    .secondHalf {
+      background: conic-gradient(
+        $primary 70deg,
+        $primary-one 71deg,
+        $primary-one 360deg
+      );
+      border: none;
+    }
+    .second {
+      background: conic-gradient(
+        $primary 45deg,
+        $primary-one 46deg,
+        $primary-one 360deg
+      );
+      border: none;
+    }
+    .firstHalf {
+      background: conic-gradient(
+        $primary 30deg,
+        $primary-one 31deg,
+        $primary-one 360deg
+      );
+      border: none;
+    }
+    .first {
+      background: conic-gradient(
+        $primary 20deg,
+        $primary-one 21deg,
+        $primary-one 360deg
+      );
+      border: none;
+    }
+    .start {
+      background: conic-gradient(
+        $primary 5deg,
+        $primary-one 6deg,
+        $primary-one 360deg
+      );
+      border: none;
+    }
+    .completed {
+      background: linear-gradient(225deg, $primary 100%, $primary-one 0%);
+      border: none;
+    }
+    h6 {
+      margin: auto;
+    }
+  }
+  .timerRow:nth-child(2) {
+    padding-top: 0;
+    h6 {
+      font: normal normal 500 14px/20px Montserrat;
+    }
+  }
+  h4 {
+    font: normal normal 600 16px/22px Montserrat;
+    letter-spacing: 0px;
+    color: #3e3e3e;
+    opacity: 1;
+    margin: 0 auto 0 8px;
+    padding-top: 9px;
+  }
+}
+
+.warning {
+  border: 2px solid $warning;
+  background: $warning-light 0% 0% no-repeat padding-box;
+  border-radius: 2px;
+}
+
+.danger {
+  border: 2px solid $danger;
+  background: $danger-light 0% 0% no-repeat padding-box;
+  border-radius: 2px;
+}
+
+@media screen and (max-width: 768px) {
+  .timer {
+    width: 100%;
+    margin: 24px auto;
+    height: auto;
+    .timerRow {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      column-gap: 8px;
+      padding: 24px;
+      h5 {
+        border-radius: 50%;
+        border: 2px solid $primary;
+        height: 72px;
+        width: 72px;
+        @include textCustomNew(600, 32px, 42px, $primary, center);
+        margin: auto;
+      }
+      h2 {
+        @include textCustomNew(600, 32px, 42px, $primary, center);
+        background: $text-color-five;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        margin: auto;
+        margin-top: 6px;
+        padding-top: 8px;
+        background-size: 100%;
+      }
+      h6 {
+        margin: auto;
+      }
+    }
+    h4 {
+      font: normal normal 600 16px/22px Montserrat;
+      letter-spacing: 0px;
+      color: #3e3e3e;
+      opacity: 1;
+      margin: 0 auto 0 8px;
+      padding-top: 9px;
+    }
+    .timerRow:nth-child(2) {
+      padding-top: 0px;
+    }
+  }
+}

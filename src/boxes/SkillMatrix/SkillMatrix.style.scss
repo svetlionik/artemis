@@ -1,0 +1,73 @@
+@import "../../custom.scss";
+$modal-box-shadow: #00000040;
+:target::before {
+  content: "";
+  display: block;
+  height: 158px;
+  margin: -158px 0 0;
+}
+
+.modal-content {
+  width: 568px !important;
+  height: auto;
+  background: $secondary 0% 0% no-repeat padding-box;
+  border: none !important;
+  box-shadow: 0px 0px 50px $modal-box-shadow;
+  border-radius: 10px !important;
+}
+.popover-arrow {
+  display: none !important;
+  visibility: hidden !important;
+}
+[type="radio"] + span {
+  display: inline-block;
+  border: 2px solid $primary;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  padding-top: 4px;
+  font: normal normal 500 16px/19px Montserrat;
+  letter-spacing: 0px;
+  color: $primary;
+}
+:checked + span {
+  background-color: $accent;
+  border-color: $accent;
+  color: $secondary;
+}
+[type="radio"]:hover + span {
+  background-color: $accent !important;
+  border-color: $accent !important;
+  color: $secondary !important;
+}
+[type="radio"]:disabled:not(:checked) + span {
+  background-color: $text-color-five;
+  border-color: $text-color-four;
+  color: $text-color-four;
+}
+[type="radio"]:hover:disabled:not(:checked) + span {
+  background-color: $text-color-five !important;
+  border-color: $text-color-four !important;
+  color: $text-color-four !important;
+}
+.radioContainer {
+  width: 100%;
+  padding-left: 4px;
+  margin-right: -16px;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  justify-content: space-around;
+  align-items: center;
+}
+@media print {
+  @page {
+    margin: 25mm 16mm 22mm 16mm;
+  }
+  * {
+    overflow: visible !important;
+  }
+  .page {
+    page-break-after: always;
+  }
+}

@@ -1,0 +1,101 @@
+@import '../../custom.scss';
+* {
+  font: normal normal 400 16px/19px Montserrat;
+}
+
+.privacy {
+  margin: 2em auto;
+  margin-bottom: 1em;
+
+  button {
+    width: 100%;
+    padding: 2em auto;
+    margin: 1em auto;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid;
+    border-radius: 2px;
+  }
+
+  .agreeBtn {
+    background: $accent;
+    border-color: $accent;
+    color: $secondary;
+
+    &:hover {
+      border-color: $accent;
+      background: $accent;
+    }
+
+    &:disabled {
+      border-color: $text-color-three;
+      background: $text-color-three;
+    }
+  }
+
+  .logoutBtn {
+    background: $secondary;
+    border-color: $text-color-four;
+    color: $text-color-two;
+
+    &:hover {
+      background: $text-color-two;
+      border-color: $text-color-two;
+      color: $secondary;
+    }
+  }
+
+  .header {
+    flex-direction: column;
+    padding-top: 1em;
+    border: none;
+
+    h4 {
+      text-align: center;
+      font-size: 1.5em;
+      letter-spacing: 0;
+      color: $primary;
+    }
+  }
+
+  .body {
+    padding: 1em 2em;
+
+    .rowTitle {
+      color: $primary;
+    }
+
+    .rowMessage {
+      padding: 1em;
+      input[type='checkbox'] {
+        scale: 0.7;
+        border: 2px solid $accent;
+      }
+      h6 {
+        margin-top: 3px;
+        align-items: center;
+
+        .shortMessage {
+          font-weight: 500;
+        }
+      }
+    }
+    .agreeLink {
+      color: $accent;
+    }
+    strong {
+      font-weight: 500;
+    }
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .shortMessage {
+    display: none;
+  }
+  input[type='checkbox'] {
+    scale: 0.5;
+    border: 12px solid $accent;
+    margin-right: 30px;
+  }
+}

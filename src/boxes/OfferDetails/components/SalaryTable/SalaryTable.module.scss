@@ -1,0 +1,68 @@
+@import 'custom.scss';
+$divider: #aaaaaa;
+.salaryTable {
+  display: flex;
+  flex-direction: row;
+
+  .salaryCard {
+    width: auto;
+    h5 {
+      @include smLeftTextBold($primary);
+    }
+    p {
+      @include textCustomNew(600, 16px, 22px, $text-color, left);
+      padding: 0;
+    }
+    &:nth-child(1) {
+      padding: 0px 64px 0px 8px;
+      border-right: 2px solid $divider;
+      margin-bottom: 36px;
+    }
+    &:nth-child(2) {
+      padding: 0px 64px 0px 16px;
+      border-right: 2px solid $divider;
+      margin-bottom: 36px;
+    }
+    &:nth-child(3) {
+      margin: 0px auto 36px 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 998px) {
+  .salaryTable {
+    display: flex;
+    flex-direction: column;
+
+    .salaryCard {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 16px 0px;
+      width: 95%;
+      h5 {
+        @include smLeftTextBold($primary);
+        padding: 0;
+      }
+      p {
+        padding: 0;
+      }
+      &:nth-child(1) {
+        margin: 0px auto;
+        padding: 16px 16px;
+        border-bottom: 2px solid $divider;
+        border-right: none;
+      }
+      &:nth-child(2) {
+        margin: 0px auto;
+        padding: 16px 16px;
+        border-bottom: 2px solid $divider;
+        border-right: none;
+      }
+      &:nth-child(3) {
+        margin: 0px auto;
+        padding: 16px 16px;
+      }
+    }
+  }
+}

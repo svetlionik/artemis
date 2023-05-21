@@ -1,0 +1,42 @@
+{
+  "general": {
+    "generalFields": [
+      {
+        "id": 0,
+        "name": "VS Code",
+        "code": "vs-code"
+      },
+      {
+        "id": 1,
+        "name": "IntelliJ IDEA",
+        "code": "intellij"
+      }
+    ],
+    "newFields": []
+  },
+  "programmingLanguages": {
+    "generalFields": [
+      {
+        "id": 0,
+        "name": "Java",
+        "code": "java"
+      },
+      {
+        "id": 1,
+        "name": "JavaScript",
+        "code": "js"
+      },
+      {
+        "id": 2,
+        "name": "PHP",
+        "code": "php"
+      },
+      {
+        "id": 3,
+        "name": "Python",
+        "code": "python"
+      }
+    ],
+    "newFields": []
+  }
+}

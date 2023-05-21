@@ -1,0 +1,57 @@
+@import 'custom.scss';
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  width: auto;
+  max-width: 900px;
+  align-content: center;
+  height: auto;
+
+  span {
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    max-width: 400px;
+    text-align: center;
+    height: 100%;
+
+    img {
+      width: 32px;
+      height: 32px;
+    }
+
+    p {
+      width: auto;
+      min-width: 294px;
+      min-height: 72px;
+      text-align: left;
+      letter-spacing: 0px;
+      color: $text-color;
+      opacity: 1;
+      margin: 0px 8px;
+    }
+  }
+  svg {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    padding: 12px 24px;
+    span {
+      margin: 6px 24px 6px 0px;
+      p {
+        width: 100%;
+        min-width: 100%;
+      }
+    }
+  }
+}

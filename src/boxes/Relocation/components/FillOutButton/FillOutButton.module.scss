@@ -1,0 +1,48 @@
+@import 'custom.scss';
+
+$upload-icon: #3386fa;
+$upload-icon-svg: invert(38%) sepia(100%) saturate(1701%) hue-rotate(153deg)
+  brightness(97%);
+$upload-icon-svg-hover: invert(45%) sepia(54%) saturate(4865%)
+  hue-rotate(204deg) brightness(106%) contrast(96%);
+
+.modal-dialog .modal-content {
+  width: 1200px !important;
+}
+
+.fillOutButton {
+  display: inline-block;
+  padding: 6px 14px 4px 0;
+  transition: all 0.5s;
+
+  * {
+    transition: all 0.5s;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background: $primary-two;
+
+    svg {
+      filter: $upload-icon-svg-hover;
+    }
+
+    span {
+      color: $upload-icon;
+    }
+  }
+
+  svg {
+    filter: $upload-icon-svg;
+    width: 24px;
+    margin-right: 8px;
+    margin-bottom: 3px;
+  }
+
+  span {
+    font-size: 16px;
+    margin-left: 12px;
+    font-weight: 600;
+    color: $dark;
+  }
+}

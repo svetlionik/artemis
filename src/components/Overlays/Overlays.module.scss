@@ -1,0 +1,35 @@
+@import "../../custom.scss";
+$box-shadow: #0000001a;
+
+.box {
+  background: $secondary 0% 0% no-repeat padding-box !important;
+  box-shadow: 3px 3px 5px $box-shadow !important;
+  border: 2px solid $primary !important;
+  height: auto;
+  padding: 0 !important;
+
+  .corner {
+    position: absolute;
+    margin: auto;
+    bottom: -7px;
+    right: 46%;
+    width: 11px;
+    height: 11px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    border-right: 2px solid $primary;
+    border-bottom: 2px solid $primary;
+    background: $secondary;
+  }
+
+  .text {
+    text-align: center;
+    font: normal normal 500 12px/15px Montserrat !important;
+    letter-spacing: 0px;
+    color: $text-color;
+    padding: 8px !important;
+  }
+}

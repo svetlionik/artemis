@@ -1,0 +1,72 @@
+image: node:16.15.1
+
+stages: # List of stages for jobs, and their order of execution
+  - install
+  - build
+  - test
+  - trigger
+  - end2end
+
+install-job: # This job installs dependencies
+  image: docker:stable-dind
+  stage: install
+  script:
+    - echo "Installing"
+    - apk add --no-cache npm
+    - npm install
+  artifacts:
+    paths:
+      - node_modules/
+    expire_in: 1 hour
+
+build-job: # This job runs in the build stage, which runs first.
+  stage: build
+  allow_failure: true
+  script:
+    - echo "Compiling the code..."
+    - CI=false npm run build:ci
+  artifacts:
+    paths:
+      - build
+      - ./src/generatedGitInfo.json
+    expire_in: 1 hour
+
+unit-test-job: # This job runs in the test stage.
+  stage: test # It only starts when the job in the build stage completes successfully.
+  script:
+    - echo "Running unit tests"
+    - npm run coverage
+  coverage: '/All files[^|]*\|[^|]*\s+([\d\.]+)/'
+  artifacts:
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage/cobertura-coverage.xml
+
+lint-test-job: # This job also runs in the test stage.
+  stage: test # It can run at the same time as unit-test-job (in parallel).
+  script:
+    - echo "Linting code... This will take about 10 seconds."
+
+deploy-job: # This job runs in the deploy stage.
+  stage: trigger # It only runs when *both* jobs in the test stage complete successfully.
+  script:
+    - echo "Waiting for deploy..."
+  when: delayed
+  start_in: 1 minutes
+  needs:
+    - job: unit-test-job
+  only:
+    - develop
+
+wait-end2end-job: # This job runs in the deploy stage.
+  stage: end2end # It only runs when *both* jobs in the test stage complete successfully.
+  allow_failure: true
+  trigger:
+    project: musala-aws/artemis/end-to-end-tests
+    strategy: depend
+    branch: develop
+  needs:
+    - job: deploy-job
+  only:
+    - develop

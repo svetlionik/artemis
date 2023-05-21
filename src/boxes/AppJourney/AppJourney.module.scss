@@ -1,0 +1,111 @@
+@import '../../custom.scss';
+
+$custom-color-line: #eeeeee;
+$progress: #f6b400;
+$progress-background: #fff6de;
+$passed-background: #f0f4ff;
+$terminated-background: #fbe5ec;
+$terminated-shadow: #da004426;
+$employed: #7e9d6e;
+$employed-background: #dfedd8;
+$step-color: #e2e5de;
+$step-active-box: #f6b40033;
+
+.disclaimerContainer {
+  text-align: center;
+  background-color: $warning-light;
+  width: 94.5vw;
+  max-width: 95vw !important;
+  padding: 15px;
+  margin: 0px auto;
+  top: 96px;
+  left: 0;
+  right: 0;
+}
+
+.disclaimerBody {
+  margin: 0;
+}
+
+.journey {
+  min-height: 80vh;
+  opacity: 1;
+  width: 1184px !important;
+  margin-bottom: 96px !important;
+  padding-top: 100px !important;
+
+  .middleLine {
+    height: 2px;
+    background-color: $custom-color-line;
+    margin: 0px;
+  }
+
+  .titlePassed {
+    padding-top: 32px;
+    padding-bottom: 16px;
+    text-align: left;
+    font: normal normal 500 24px/29px Montserrat;
+    letter-spacing: 0px;
+    color: $text-color-two;
+    margin-bottom: 0;
+  }
+
+  .title {
+    text-align: left;
+    font: normal normal 500 24px/29px Montserrat;
+    letter-spacing: 0px;
+    color: $text-color-two;
+    padding-top: 90px;
+    padding-bottom: 16px;
+    margin-bottom: 0;
+    span {
+      @include smLeftTextBold($text-color-three);
+    }
+    svg {
+      margin-bottom: 4px;
+      color: $danger;
+    }
+  }
+}
+@media only screen and (max-width: 998px) {
+  .disclaimerContainer {
+    top: 65px;
+    // position: absolute;
+    z-index: 99;
+  }
+
+  .disclaimerBody {
+    margin: 0;
+  }
+  .journey {
+    min-width: 90% !important;
+    width: 90% !important;
+    margin-top: 0 !important;
+    padding-top: 20px !important;
+
+    .middleLine {
+      margin-top: 8px;
+    }
+    .titlePassed {
+      text-align: left;
+      font: normal normal 500 18px/24px Montserrat !important;
+      letter-spacing: 0px;
+      color: $text-color;
+      padding-top: 16px;
+      padding-bottom: 8px;
+    }
+
+    .title {
+      text-align: left;
+      font: normal normal 500 18px/24px Montserrat !important;
+      letter-spacing: 0px;
+      padding-top: 24px;
+      padding-bottom: 8px;
+      color: $text-color;
+
+      svg {
+        margin-bottom: 2px;
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "info": [
+    {
+      "id": 0,
+      "name": "VS Code",
+      "code": "vs-code"
+    },
+    {
+      "id": 1,
+      "name": "IntelliJ IDEA",
+      "code": "intellij"
+    }
+  ],
+  "general": [
+    {
+      "id": 0,
+      "name": "Algorithms and data structure",
+      "code": "algorithm"
+    },
+    {
+      "id": 1,
+      "name": "OOP",
+      "code": "oop"
+    },
+    {
+      "id": 2,
+      "name": "Additional skill",
+      "code": "additional"
+    },
+    {
+      "id": 3,
+      "name": "Additional skill 2",
+      "code": "additional-2"
+    },
+    {
+      "id": 4,
+      "name": "Additional skill 3",
+      "code": "additional-3"
+    },
+    {
+      "id": 5,
+      "name": "Additional skill 4",
+      "code": "additional-4"
+    }
+  ],
+  "programmingLanguage": [
+    {
+      "id": 0,
+      "name": "Java",
+      "code": "java"
+    },
+    {
+      "id": 1,
+      "name": "JavaScript",
+      "code": "js"
+    },
+    {
+      "id": 2,
+      "name": "PHP",
+      "code": "php"
+    },
+    {
+      "id": 3,
+      "name": "Python",
+      "code": "python"
+    }
+  ],
+  "qa": [
+    {
+      "id": 0,
+      "name": "Basics"
+    }
+  ]
+}

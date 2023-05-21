@@ -1,0 +1,50 @@
+@import '../../custom.scss';
+$box-shadow: #0000001a;
+
+.box {
+  background: $secondary 0% 0% no-repeat padding-box !important;
+  box-shadow: 3px 3px 5px $box-shadow !important;
+  height: auto;
+  padding: 0 !important;
+
+  .orange {
+    border-right: 2px solid $warning !important;
+    border-bottom: 2px solid $warning !important;
+  }
+
+  .red {
+    border-right: 2px solid $danger !important;
+    border-bottom: 2px solid $danger !important;
+  }
+  .corner {
+    position: absolute;
+    margin: auto;
+    top: -7px;
+    right: 46%;
+    width: 11px;
+    height: 11px;
+    border-right: 2px solid $text-color-four;
+    border-bottom: 2px solid $text-color-four;
+    transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+    -moz-transform: rotate(225deg);
+    -o-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    background: $secondary;
+  }
+
+  .text {
+    text-align: center;
+    font: normal normal 500 12px/15px Montserrat !important;
+    letter-spacing: 0px;
+    color: $text-color;
+    padding: 8px !important;
+  }
+}
+.box.orange {
+  border: 2px solid $warning !important;
+}
+
+.box.red {
+  border: 2px solid $danger !important;
+}

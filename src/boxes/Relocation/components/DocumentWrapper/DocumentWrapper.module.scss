@@ -1,0 +1,77 @@
+@import 'custom.scss';
+
+.contentWrapper {
+  background: #fff;
+  padding: 30px;
+  border: 2px solid #ddd;
+  border-top: none;
+}
+.groupTitle {
+  background: #f0f4ff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+}
+
+.documentWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid #33333366;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin: 15px auto;
+
+  &.active {
+    background: $primary-two;
+  }
+
+  .sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .sectionTitle {
+      color: #555;
+    }
+    .uploadButton {
+      margin: 0;
+    }
+  }
+  .fileList {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 20px;
+    border-top: 2px solid #2b459122;
+    margin-top: 10px;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .documentWrapper {
+    padding: 20px 10px;
+  }
+  .sectionHeader {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sectionTitle {
+    margin: 5px auto;
+    text-align: center;
+  }
+
+  .uploadButton {
+    margin: 0 auto !important;
+    width: 120px;
+  }
+
+  .fileList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

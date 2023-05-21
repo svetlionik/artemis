@@ -1,0 +1,29 @@
+@media screen and (max-width: 768px) {
+  .modal-dialog {
+    width: 100%;
+    margin: 0 auto !important;
+    opacity: 1;
+    max-height: 50vh;
+    height: unset !important;
+
+    .modal-content {
+      height: unset !important;
+    }
+  }
+
+  .modal-backdrop.show {
+    opacity: .4 !important;
+  }
+
+  .modal.fade .modal-dialog {
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    -webkit-transition: none !important;
+    transition: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -o-transform: none !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+  }
+}

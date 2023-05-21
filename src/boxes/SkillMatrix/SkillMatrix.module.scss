@@ -1,0 +1,1492 @@
+@import '../../custom.scss';
+
+$border-color: #f6f6f6;
+$background-second-color: #e2e5de;
+$step-shadow: #f6b40033;
+$mobile-label-color: #129fa126;
+
+// main skill matrix
+.form {
+  width: 95% !important;
+  margin: 0;
+  padding: 0 !important;
+}
+
+// new form
+.formLayout {
+  width: 100%;
+  padding-top: 40px;
+
+  .formType {
+    background-color: $secondary;
+    padding: 11px 0px 10px 0px;
+
+    @include newTextClass(
+      normal normal 600 16px/19px Montserrat,
+      $text-color-two
+    );
+  }
+
+  .formComponent {
+    max-width: 1009px;
+    margin: auto;
+  }
+}
+
+// info - first page
+.info {
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  min-height: 90vh;
+  height: auto;
+
+  .information {
+    width: 900px;
+    margin: auto;
+
+    h1 {
+      @include newTextClass(normal normal 600 32px/39px Montserrat, $primary);
+      text-align: center;
+      padding-top: 180px;
+      margin-bottom: 34px;
+    }
+
+    p {
+      @include newTextClass(
+        normal normal normal 22px/32px Montserrat,
+        $text-color-two
+      );
+      text-align: center;
+      padding-top: 0px;
+      margin-bottom: 0;
+    }
+  }
+
+  .beginButtonContainer {
+    padding-bottom: 24px;
+
+    p {
+      color: $text-color-two;
+      padding-bottom: 11px;
+      padding-top: 0px;
+    }
+
+    .beginBtn {
+      background: $accent 0% 0% no-repeat padding-box;
+      color: $secondary;
+      border: none;
+    }
+  }
+
+  .marksButtonContainer {
+    padding-bottom: 64px;
+
+    p {
+      color: $text-color-two;
+      padding-top: 98px;
+      padding-bottom: 8px;
+    }
+
+    .marksBtn {
+      background: $secondary 0% 0% no-repeat padding-box;
+      border: 2px solid $text-color-four;
+      color: $text-color-two;
+    }
+  }
+
+  [class*='ButtonContainer'] {
+    p {
+      text-align: center;
+      font: normal normal normal 16px/19px Montserrat;
+      letter-spacing: 0px;
+      opacity: 1;
+      margin-bottom: 0;
+    }
+
+    [class*='Btn'] {
+      width: 192px;
+      height: 40px;
+      border-radius: 2px;
+      opacity: 1;
+      text-align: center;
+      font: normal normal 600 16px/19px Montserrat;
+      letter-spacing: 0px;
+    }
+  }
+
+  p {
+    text-align: center;
+    font: normal normal normal 16px/19px Montserrat;
+    letter-spacing: 0px;
+    color: $text-color-two;
+    opacity: 1;
+  }
+}
+
+.table {
+  margin-bottom: 32px !important;
+
+  thead {
+    background: $primary 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    opacity: 1;
+
+    th:first-child {
+      @include leftRoundCorners;
+    }
+
+    th:last-child {
+      @include rightRoundCorners;
+    }
+
+    th:nth-child(n + 2) {
+      text-align: center;
+    }
+
+    th {
+      @include newTextClass(normal normal 600 16px/19px Montserrat, $secondary);
+      padding: 0;
+      height: 48px;
+
+      .skip {
+        float: right;
+        margin: -34px 24px 0px 12px;
+        cursor: pointer;
+      }
+
+      .skipButton {
+        float: right;
+        margin: 0;
+        border-right: none;
+        height: 18px;
+        padding: 0;
+        padding-right: 24px;
+        cursor: pointer;
+        margin-top: -36px;
+
+        img {
+          padding-right: 8px;
+        }
+      }
+
+      .unskipButton {
+        float: right;
+        margin: 0;
+        border-right: none;
+        height: 18px;
+        padding: 0;
+        padding-right: 24px;
+        cursor: pointer;
+        margin-top: -36px;
+        opacity: 0.5;
+
+        img {
+          padding-right: 8px;
+        }
+      }
+
+      p {
+        margin: 15px -2px 15px 16px;
+        height: 19px;
+        border-right: 2px solid $border-color;
+      }
+    }
+  }
+
+  tbody {
+    border-top: none !important;
+
+    tr > td:first-child {
+      @include leftRoundCorners;
+      background-color: $text-color;
+    }
+
+    tr > td:last-child {
+      @include rightRoundCorners;
+    }
+
+    tr:last-child:nth-child(odd) {
+      border-bottom: 2px solid $text-color-four;
+    }
+
+    tr:nth-child(odd) > td,
+    tr:nth-child(odd) > th {
+      background-color: $secondary;
+      border: none;
+    }
+
+    tr:nth-child(even) > td,
+    tr:nth-child(even) > th {
+      background-color: $border-color;
+      border: none;
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus {
+      color: $text-color-three;
+      font: normal normal normal 14px/18px Montserrat !important;
+      -webkit-text-fill-color: $text-color-three;
+      box-shadow: 0 0 0px 1000px transparent inset;
+      -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+      transition: background-color 5000s ease-in-out 0s;
+    }
+
+    input::-webkit-input-placeholder {
+      @include newTextClass(
+        normal normal normal 14px/18px Montserrat,
+        $text-color-three
+      );
+    }
+
+    tr.emptyField {
+      border-radius: 5px !important;
+      border: 2px solid $danger !important;
+    }
+
+    tr {
+      border-radius: 5px;
+      opacity: 1;
+      padding: 34px 0 34px 32px;
+      height: 90px;
+      max-height: 90px;
+
+      .mobileLevelHeader {
+        display: none;
+      }
+
+      td {
+        @include newTextClass(
+          normal normal 500 18px/22px Montserrat,
+          $text-color
+        );
+        height: 22px;
+        padding: 0;
+        border-right: 2px solid $border-color;
+
+        p {
+          padding: 34px 0 34px 32px;
+          margin-bottom: 0;
+        }
+
+        .description {
+          @include newTextClass(
+            normal normal 500 14px/19px Montserrat,
+            $text-color-three
+          );
+          margin: -28px 34px 0px 32px;
+        }
+
+        .newAdded {
+          padding: 34px 0 34px 24px;
+          display: flex;
+          flex-direction: row;
+          height: 90px;
+
+          h6 {
+            margin-right: 12px;
+            z-index: 1;
+            cursor: pointer;
+            color: $danger;
+          }
+        }
+      }
+
+      // general form
+      .radio {
+        @include radioBox;
+        width: 348px;
+        min-width: 348px;
+
+        p {
+          display: none;
+        }
+      }
+
+      .years {
+        @include radioBox;
+        display: revert;
+        width: 205px;
+        min-width: 205px;
+
+        p {
+          display: none;
+        }
+
+        .otherDiv {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          align-items: center;
+          padding-left: 10px;
+          padding-right: 10px;
+          width: 100%;
+          min-width: 165px;
+
+          label {
+            margin: 0 8px 0 8px;
+          }
+        }
+      }
+
+      .field {
+        width: 725px;
+      }
+
+      // other part
+      .textInput {
+        width: 725px;
+
+        .formGroup {
+          padding: 35px 34px 28px 48px;
+          height: 100%;
+
+          .formInput {
+            padding: 6px 0px;
+            height: 27px;
+            border: none;
+            border-bottom: 1px solid $primary;
+            background: transparent;
+            border-radius: 0;
+          }
+        }
+
+        // with option
+        .formGroupExtend {
+          padding: 35px 34px 28px 24px;
+          margin: 0;
+          display: flex;
+          flex-direction: row;
+
+          h6 {
+            padding-top: 2px;
+            margin: 0 16px 0 0;
+            z-index: 1;
+            cursor: pointer;
+            color: $danger;
+          }
+        }
+      }
+    }
+  }
+
+  tfoot {
+    border-top: none !important;
+
+    .addBtn {
+      @include newButton($secondary, $primary, $primary);
+
+      float: right;
+      margin-top: 32px;
+
+      &:disabled {
+        background: $text-color-four 0% 0% no-repeat padding-box;
+        border: 2px solid $text-color-four;
+        color: $secondary;
+        border-radius: 2px;
+        opacity: 1;
+      }
+
+      &:hover {
+        @include newButton($accent, $accent, $secondary);
+      }
+    }
+
+    p {
+      margin: auto;
+      padding-top: 42px;
+    }
+  }
+}
+
+.finishDiv {
+  h6 {
+    @include newTextClass(normal normal 600 32px/39px Montserrat, $primary);
+    text-align: center;
+    margin-bottom: 0;
+    padding-top: 90px;
+  }
+
+  p {
+    @include newTextClass(
+      normal normal normal 22px/32px Montserrat,
+      $text-color-two
+    );
+    text-align: center;
+    margin-bottom: 0;
+    padding: 48px 0 60px 0;
+  }
+
+  .start {
+    .first {
+      @include newTextClass(
+        normal normal normal 20px/24px Montserrat,
+        $text-color-two
+      );
+      text-align: center;
+      padding: 0;
+    }
+
+    .link {
+      @include newTextClass(
+        normal normal normal 16px/19px Montserrat,
+        $text-color-two
+      );
+      text-align: center;
+      padding: 24px 0 60px 0;
+
+      a {
+        @include newTextClass(normal normal 600 16px/19px Montserrat, $accent);
+        text-align: center;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .submit {
+    text-align: center;
+    padding-bottom: 215px;
+
+    .formCheckInput {
+      margin-right: 8px;
+      width: 22px;
+      height: 22px;
+      margin-top: 0;
+    }
+
+    .default {
+      background-color: $text-color-three !important;
+      border: $text-color-three !important;
+    }
+
+    .policy {
+      width: 840px;
+      float: right;
+      text-align: left;
+
+      .policyLink {
+        @include newTextClass(normal normal 600 14px/18px Montserrat, $accent);
+        text-decoration: underline;
+      }
+
+      .formCheck {
+        @include newTextClass(
+          normal normal 500 14px/18px Montserrat,
+          $text-color-two
+        );
+        margin: 4px auto;
+      }
+
+      .formCheckLabel {
+        cursor: default;
+      }
+    }
+
+    .text {
+      @include newTextClass(
+        normal normal normal 20px/24px Montserrat,
+        $text-color-two
+      );
+      text-align: center;
+      padding: 0 0 40px 0;
+    }
+
+    .submitError {
+      @include newTextClass(normal normal 500 14px/18px Montserrat, $danger);
+      display: block;
+      padding-top: 12px;
+    }
+
+    .submitBtn {
+      @include newButton($accent, transparent, $secondary);
+      margin-top: 22px;
+
+      &:hover {
+        @include newButton($accent-hover, transparent, $secondary);
+      }
+
+      &:disabled {
+        @include newButton($text-color-four, transparent, $secondary);
+      }
+    }
+  }
+}
+
+.row {
+  margin: 0 !important;
+
+  thead {
+    background: $primary 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    opacity: 1;
+
+    th:first-child {
+      @include leftRoundCorners;
+    }
+
+    th:last-child {
+      @include rightRoundCorners;
+    }
+
+    th {
+      @include newTextClass(normal normal 600 16px/19px Montserrat, $secondary);
+      padding: 0;
+      height: 40px;
+      border-bottom: none;
+
+      p {
+        padding: 11px 48px 10px 48px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.sectionTitle {
+  @include newTextClass(
+    normal normal 500 20px/24px Montserrat,
+    $text-color-two
+  );
+  position: absolute;
+  top: 140px;
+  margin-bottom: 0px;
+  padding-left: 8px;
+}
+
+// section progress
+.sectionProgress {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  max-width: 300px !important;
+
+  .sectionCaption {
+    width: 90%;
+    padding-left: 5px;
+  }
+}
+
+.borderLine {
+  top: 160px;
+  position: absolute;
+  z-index: 1;
+  width: auto;
+  width: 2px;
+
+  &:before {
+    background: linear-gradient(
+      to right,
+      $primary 100%,
+      $background-second-color 0%
+    );
+    content: '';
+    margin: auto 0;
+    position: absolute;
+    top: 15%;
+    left: 15px;
+    bottom: 18%;
+    width: 2px;
+    z-index: -1;
+    height: 95%;
+  }
+}
+
+.active {
+  width: auto;
+  height: 22px;
+  margin-bottom: 10px;
+
+  // step number
+  p {
+    background: $primary 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 10px $step-shadow;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    margin-top: auto;
+    margin-bottom: auto;
+    font: normal normal 500 18px/22px Montserrat;
+  }
+
+  // step name
+  h6 {
+    @include newTextClass(
+      normal normal normal 16px/19px Montserrat,
+      $text-color
+    );
+
+    margin-bottom: 0;
+    margin-top: 2px;
+
+    a {
+      text-decoration: none;
+      color: $text-color;
+    }
+  }
+}
+
+.inactive {
+  width: auto;
+  height: 22px;
+  margin-bottom: 10px;
+
+  // step number
+  p {
+    background: $secondary 0% 0% no-repeat padding-box;
+    border: 1px solid $text-color-four;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    margin-top: auto;
+    margin-bottom: auto;
+    font: normal normal 500 18px/22px Montserrat;
+  }
+
+  // step name
+  h6 {
+    @include newTextClass(
+      normal normal normal 16px/19px Montserrat,
+      $text-color
+    );
+
+    margin-bottom: 0;
+    margin-top: 2px;
+
+    a {
+      text-decoration: none;
+      color: $text-color;
+    }
+  }
+}
+
+@media screen and (max-height: 900px) {
+  .sectionTitle {
+    @include newTextClass(
+      normal normal 500 20px/24px Montserrat,
+      $text-color-two
+    );
+    position: absolute;
+    top: 140px;
+    margin-bottom: 0px;
+    padding-left: 8px;
+  }
+
+  .inactive {
+    width: auto;
+    height: 20px;
+    margin-bottom: 2px;
+    p {
+      font: normal normal 500 14px/19px Montserrat;
+    }
+    // step name
+    h6 {
+      @include newTextClass(
+        normal normal 500 14px/16px Montserrat,
+        $text-color
+      );
+    }
+  }
+  .active {
+    width: auto;
+    height: 20px;
+    margin-bottom: 2px;
+
+    p {
+      font: normal normal 500 14px/19px Montserrat;
+    }
+
+    // step name
+    h6 {
+      @include newTextClass(
+        normal normal 500 14px/16px Montserrat,
+        $text-color
+      );
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 995px) {
+  .info {
+    .information {
+      width: auto;
+      max-width: 720px;
+    }
+  }
+
+  .table {
+    thead {
+      th:first-child {
+        width: 235px;
+      }
+
+      th:nth-child(n + 2) {
+        p {
+          padding-top: 2px;
+          margin-left: -2px;
+        }
+      }
+
+      th {
+        .skip {
+          float: right;
+          margin: -34px 24px 0px 12px;
+          cursor: pointer;
+        }
+
+        p {
+          margin: 15px -2px 15px 16px;
+          height: 29px;
+          border-right: 2px solid $border-color;
+        }
+      }
+    }
+
+    tbody {
+      .emptyField {
+        border-radius: 5px !important;
+        border: 2px solid $danger !important;
+      }
+
+      tr {
+        border-radius: 5px;
+        opacity: 1;
+        padding: 34px 0 34px 32px;
+        height: 90px;
+        max-height: 90px;
+
+        .mobileLevelHeader {
+          display: none;
+        }
+
+        td {
+          p {
+            padding: 32px 0 12px 32px;
+          }
+
+          .description {
+            @include newTextClass(
+              normal normal 500 14px/19px Montserrat,
+              $text-color-three
+            );
+            margin: -28px 34px 0px 32px;
+          }
+
+          .newAdded {
+            padding: 34px 0 34px 24px;
+            display: flex;
+            flex-direction: row;
+            height: 90px;
+
+            h6 {
+              margin-right: 12px;
+              z-index: 1;
+              cursor: pointer;
+              color: $danger;
+            }
+          }
+        }
+
+        // general form
+        .radio {
+          padding: 19px 0px 19px 0px;
+          max-height: 129px;
+          min-height: 90px;
+          height: auto;
+        }
+
+        .years {
+          width: 180px;
+          min-width: 180px;
+          padding: 19px 0px 19px 6px;
+
+          .otherDiv {
+            width: 165px;
+            padding-left: 0px;
+            margin-right: -4px;
+
+            label {
+              margin: 0 2px 0 2px;
+            }
+          }
+        }
+
+        .field {
+          width: 725px;
+
+          .formGroupExtend {
+            width: 232px;
+            padding: 28px 24px 4px 12px;
+            word-break: break-all;
+          }
+        }
+
+        // other part
+        .textInput {
+          // with option
+          .formGroupExtend {
+            h6 {
+              padding-top: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .submit {
+    .formCheck {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+
+@media screen and (max-height: 720px) {
+  .colOne {
+    display: none !important;
+    background-color: $accent-hover;
+    width: 0 !important;
+    height: 0px !important;
+  }
+
+  .sectionTitle {
+    display: none !important;
+  }
+
+  // section progress
+  .sectionProgress {
+    display: none !important;
+    width: 0 !important;
+    height: 0px !important;
+  }
+
+  .borderLine {
+    display: none !important;
+    width: 0 !important;
+    height: 0px !important;
+
+    &:before {
+      display: none !important;
+      width: 0 !important;
+      height: 0px !important;
+    }
+  }
+
+  .active {
+    display: none !important;
+
+    // step number
+    p {
+      display: none !important;
+    }
+
+    // step name
+    h6 {
+      display: none !important;
+
+      a {
+        display: none !important;
+      }
+    }
+  }
+
+  .active {
+    display: none !important;
+
+    // step number
+    p {
+      display: none !important;
+    }
+    // step name
+    h6 {
+      display: none !important;
+
+      a {
+        display: none !important;
+      }
+    }
+  }
+  .inactive {
+    display: none !important;
+
+    // step number
+    p {
+      display: none !important;
+    }
+    // step name
+    h6 {
+      display: none !important;
+
+      a {
+        display: none !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  // main skill matrix
+  .form {
+    width: 100% !important;
+    margin: 0;
+    padding: 0 !important;
+  }
+
+  // new form
+  .formLayout {
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+    padding-top: 0px;
+
+    .col {
+      padding: 0;
+    }
+
+    .formComponent {
+      float: none;
+    }
+  }
+
+  // info - first page
+  .info {
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    .information {
+      width: 100%;
+
+      h1 {
+        font: normal normal 600 24px/29px Montserrat;
+        padding-top: 48px;
+        margin-bottom: 0;
+      }
+
+      p {
+        font: normal normal normal 16px/19px Montserrat;
+        padding: 24px 24px 0 24px;
+      }
+    }
+
+    .beginButtonContainer {
+      padding-bottom: 24px;
+
+      p {
+        padding-bottom: 8px;
+        padding-top: 24px;
+      }
+
+      .beginBtn {
+        border-radius: 4px;
+      }
+    }
+
+    .marksButtonContainer {
+      padding-bottom: 24px;
+
+      p {
+        padding-top: 0;
+        margin-bottom: 0;
+        padding-bottom: 8px;
+      }
+
+      .marksBtn {
+        border-radius: 4px;
+      }
+    }
+
+    .infoFooter {
+      font: normal normal normal 14px/18px Montserrat;
+      padding: 0 44px 0 44px;
+      margin-bottom: auto;
+    }
+  }
+
+  .table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 32px !important;
+
+    thead {
+      border-radius: 0px;
+
+      .levelHeader {
+        display: none;
+
+        p {
+          display: none;
+        }
+      }
+
+      th {
+        border: none;
+
+        .skipButton {
+          margin: 0 0 4px 36px;
+          float: none;
+          height: 34px;
+          width: 104px;
+        }
+
+        .unskipButton {
+          margin: 0 0 4px 36px;
+          float: none;
+        }
+
+        p {
+          margin: 15px 0 14px 36px;
+          height: 19px;
+          width: 100%;
+          border-right: none;
+        }
+      }
+    }
+
+    tbody {
+      border-bottom: none;
+
+      tr:nth-child(odd) > td,
+      tr:nth-child(odd) > th {
+        background-color: transparent;
+        border: none;
+      }
+
+      tr:nth-child(even) > td,
+      tr:nth-child(even) > th {
+        background-color: transparent;
+        border: none;
+      }
+
+      tr {
+        padding: 8px 19px 16px 19px;
+        margin: 16px auto;
+        height: auto;
+        max-height: none;
+        display: flex;
+        flex-direction: column;
+        background-color: $border-color;
+
+        .mobileLevelHeader {
+          text-align: center;
+          display: block;
+          margin-bottom: 0;
+          font: normal normal normal 16px/19px Montserrat;
+          letter-spacing: 0px;
+          color: $text-color;
+          opacity: 1;
+          padding: 12px 16px 18px 16px;
+
+          .label {
+            height: 36px;
+            background-color: $mobile-label-color;
+            text-align: center;
+            padding-top: 8px;
+            margin-bottom: 0;
+          }
+        }
+
+        td {
+          text-align: center;
+          font: normal normal 500 18px/22px Montserrat;
+          height: auto;
+          padding: 0;
+          border-right: 2px solid $border-color;
+
+          p {
+            padding: 20px 16px 20px 16px;
+            margin-bottom: 0;
+            font: normal normal 500 16px/19px Montserrat;
+          }
+
+          .description {
+            @include newTextClass(
+              normal normal 500 14px/19px Montserrat,
+              $text-color-three
+            );
+            margin: -22px auto 0px auto;
+            text-align: center;
+          }
+
+          .newAdded {
+            padding: 20px 16px 20px 0px;
+            display: flex;
+            flex-direction: row;
+            height: 59px;
+
+            h6 {
+              margin-right: 8px;
+              margin-top: -2px;
+              z-index: 1;
+              cursor: pointer;
+              color: $danger;
+            }
+          }
+        }
+
+        // general form
+        .radio {
+          width: 100%;
+          min-width: 100%;
+          padding: 0 0px 0 0px;
+          // justify-content: space-evenly;
+          // display: block;
+          height: auto;
+          min-height: 48px;
+
+          p {
+            display: block;
+            width: 100%;
+            font: normal normal normal 16px/19px Montserrat;
+            padding: 12px 16px 18px;
+          }
+        }
+
+        .years {
+          width: 100%;
+
+          p {
+            display: block;
+            width: 100%;
+            font: normal normal normal 16px/19px Montserrat;
+            padding: 12px 16px 18px;
+          }
+        }
+
+        .field {
+          width: 100%;
+        }
+
+        // other part
+        .textInput {
+          width: 100%;
+
+          .formGroup {
+            padding: 20px 16px 22px 16px;
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+          }
+
+          // with option
+          .formGroupExtend {
+            padding: 20px 16px 22px 16px;
+            margin: 0;
+
+            h6 {
+              padding-top: 1px;
+              margin: 0 4px 0 0;
+            }
+          }
+        }
+      }
+    }
+
+    tfoot {
+      margin: auto;
+
+      .addBtn {
+        @include newMobileButton;
+        height: 44px;
+      }
+
+      p {
+        width: 250px;
+        text-align: center;
+        padding-top: 16px;
+        margin-top: 8px;
+      }
+    }
+  }
+
+  .finishDiv {
+    max-width: 340px;
+    width: 340px;
+    margin: auto;
+
+    h6 {
+      text-align: center;
+      font: normal normal 600 28px/34px Montserrat;
+      padding: 32px 28px 0 28px;
+    }
+
+    p {
+      padding: 22px 0 32px 0;
+    }
+
+    .policy {
+      max-width: 340px;
+      text-align: center;
+      display: inline-block;
+      float: none;
+
+      .policyLink {
+        text-align: center;
+        text-decoration: underline;
+        font: normal normal 600 14px/18px Montserrat;
+        letter-spacing: 0px;
+        color: $accent;
+        width: 320px;
+      }
+
+      .formCheck {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        padding-top: 12px;
+        margin: 0 auto;
+        text-align: center;
+
+        .formCheckInput {
+          margin: 4px 4px 4px 16px;
+        }
+
+        label {
+          width: 80%;
+        }
+      }
+    }
+
+    .start {
+      .first {
+        padding: 0 28px 0 28px;
+      }
+
+      .link {
+        text-align: center;
+        font: normal normal normal 16px/25px Montserrat;
+        padding: 24px 28px 60px 28px;
+      }
+    }
+
+    .submit {
+      text-align: center;
+      padding-bottom: 80px;
+
+      .text {
+        padding: 0 28px 24px 28px;
+      }
+
+      .submitBtn {
+        @include newMobileButton;
+      }
+    }
+  }
+
+  .row {
+    margin-bottom: 0 !important;
+
+    thead {
+      background: $primary 0% 0% no-repeat padding-box;
+      border-radius: 0px;
+      opacity: 1;
+
+      th {
+        @include newTextClass(
+          normal normal 600 16px/19px Montserrat,
+          $secondary
+        );
+        padding: 0;
+        height: 48px;
+
+        p {
+          padding: 15px 48px 14px 48px;
+          margin-bottom: 0;
+        }
+
+        .arrowIcon {
+          margin: -10px 14px -8px -14px;
+          padding-bottom: 2px;
+        }
+      }
+    }
+  }
+}
+
+@media print {
+  .form {
+    width: 1000px !important;
+    margin: 0;
+    padding: 0 !important;
+  }
+
+  // new form
+  .noPrint {
+    display: none !important;
+  }
+
+  .table {
+    margin-bottom: 24px !important;
+
+    thead {
+      background-color: $primary;
+
+      th {
+        background-color: $primary;
+        -webkit-print-color-adjust: exact;
+
+        p {
+          margin: 4px -2px 8px 48px;
+          height: 19px !important;
+          border: none !important;
+        }
+      }
+    }
+
+    tbody {
+      border-bottom: 1px solid $text-color-four;
+
+      tr:nth-child(odd) > td,
+      tr:nth-child(odd) > th {
+        -webkit-print-color-adjust: exact;
+      }
+
+      tr:nth-child(even) > td,
+      tr:nth-child(even) > th {
+        -webkit-print-color-adjust: exact;
+      }
+
+      tr {
+        border-radius: 5px;
+        opacity: 1;
+        padding: 24px 0 24px 48px;
+        height: 70px;
+        max-height: 70px;
+
+        .mobileLevelHeader {
+          display: none;
+        }
+
+        td {
+          height: 22px;
+          border-right: none;
+
+          p {
+            padding: 24px 0 24px 48px;
+            color: $text-color;
+            opacity: 1;
+          }
+
+          .newAdded {
+            padding: 24px 0 24px 24px;
+            display: flex;
+            flex-direction: row;
+            height: 70px;
+            margin-left: 28px;
+
+            h6 {
+              display: none;
+            }
+          }
+        }
+
+        // general form
+        .radio {
+          width: 400px;
+          min-width: 400px;
+          padding: 12px 54px 12px 48px;
+          height: 70px;
+        }
+
+        .years {
+          width: 256px;
+
+          .formGroup {
+            padding: 22px 48px 22px 48px;
+            width: 256px;
+            max-height: 70px;
+
+            p {
+              display: none;
+            }
+
+            .selectPlaceholder {
+              font: normal normal normal 14px/18px Montserrat;
+              padding: 2px 0 7px 2px;
+              border: none;
+
+              img {
+                display: none;
+              }
+
+              .exp {
+                font: normal normal normal 16px/19px Montserrat;
+                color: $text-color;
+                padding-bottom: -2px;
+              }
+            }
+          }
+        }
+
+        .field {
+          width: 725px;
+        }
+
+        // other part
+        .textInput {
+          width: 725px;
+
+          .formGroup {
+            padding: 22px 34px 22px 48px;
+
+            .formInput {
+              padding: 6px 0px;
+              height: 22px;
+              border: none;
+            }
+          }
+
+          // with option
+          .formGroupExtend {
+            padding: 22px 34px 22px 48px;
+
+            h6 {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    tfoot {
+      .addBtn {
+        display: none;
+      }
+    }
+  }
+
+  .finishDiv {
+    display: none;
+  }
+
+  .row {
+    display: none;
+  }
+
+  // section progress
+  .sectionProgress {
+    display: none;
+  }
+
+  .borderLine {
+    display: none;
+  }
+
+  .active {
+    display: none;
+  }
+
+  .inactive {
+    display: none;
+  }
+
+  .confirm {
+    display: none;
+  }
+}

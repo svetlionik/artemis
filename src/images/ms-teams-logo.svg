@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.174" y1="1.067" x2="0.826" y2="-0.063" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#5a62c3"/>
+      <stop offset="0.5" stop-color="#4d55bd"/>
+      <stop offset="1" stop-color="#3940ab"/>
+    </linearGradient>
+  </defs>
+  <g id="ms-teams-logo" transform="translate(32 32) rotate(180)">
+    <rect id="Rectangle_494" data-name="Rectangle 494" width="32" height="32" fill="none"/>
+    <g id="ms-teams-logo-2" data-name="ms-teams-logo" transform="translate(-17543.352 -13598.463) rotate(180)">
+      <g id="Microsoft_Office_Teams__2018_present_" data-name="Microsoft_Office_Teams_(2018–present)" transform="translate(-17570.352 -13624.462)">
+        <path id="Path_3834" data-name="Path 3834" d="M1503.668,777.5h5.62a.961.961,0,0,1,.961.961h0v5.119a3.533,3.533,0,0,1-3.533,3.534h-.017a3.533,3.533,0,0,1-3.534-3.533h0V778a.5.5,0,0,1,.5-.5Z" transform="translate(-1488.75 -770.081)" fill="#5059c9"/>
+        <circle id="Ellipse_25" data-name="Ellipse 25" cx="2.277" cy="2.277" r="2.277" transform="translate(16.44 2.024)" fill="#5059c9"/>
+        <circle id="Ellipse_26" data-name="Ellipse 26" cx="3.289" cy="3.289" r="3.289" transform="translate(8.456 0)" fill="#7b83eb"/>
+        <path id="Path_3835" data-name="Path 3835" d="M632.045,777.5h-9.277a.951.951,0,0,0-.928.973v5.839a5.573,5.573,0,1,0,11.132,0v-5.839A.951.951,0,0,0,632.045,777.5Z" transform="translate(-615.915 -770.15)" fill="#7b83eb"/>
+        <path id="Path_3838" data-name="Path 3838" d="M627.54,777.5v7.676a.933.933,0,0,1-.926.926h-4.372a6.163,6.163,0,0,1-.268-1.791v-5.839a.95.95,0,0,1,.926-.971Z" transform="translate(-615.998 -770.066)" opacity="0.2"/>
+        <path id="Path_3839" data-name="Path 3839" d="M627.034,777.5v7.676a.933.933,0,0,1-.926.926h-3.866a6.163,6.163,0,0,1-.268-1.791v-5.839a.95.95,0,0,1,.926-.971Z" transform="translate(-615.995 -770.066)" opacity="0.2"/>
+        <path id="Path_3841" data-name="Path 3841" d="M909.867,467.427v1.088a2.777,2.777,0,0,1-.506-.081,3.289,3.289,0,0,1-2.277-1.933h1.857A.929.929,0,0,1,909.867,467.427Z" transform="translate(-898.349 -462.007)" opacity="0.2"/>
+        <path id="Path_3842" data-name="Path 3842" d="M909.867,467.427v1.088a2.777,2.777,0,0,1-.506-.081,3.289,3.289,0,0,1-2.277-1.933h1.857A.929.929,0,0,1,909.867,467.427Z" transform="translate(-898.349 -462.007)" opacity="0.2"/>
+        <path id="Path_3843" data-name="Path 3843" d="M909.36,467.426v1.007a3.289,3.289,0,0,1-2.277-1.933h1.351A.93.93,0,0,1,909.36,467.426Z" transform="translate(-898.345 -462.006)" opacity="0.2"/>
+        <path id="Path_3844" data-name="Path 3844" d="M.928,466.5H10.2a.918.918,0,0,1,.928.908v9.077a.918.918,0,0,1-.928.908H.928A.918.918,0,0,1,0,476.485v-9.077A.918.918,0,0,1,.928,466.5Z" transform="translate(0 -461.946)" fill="url(#linear-gradient)"/>
+        <path id="Path_3845" data-name="Path 3845" d="M325.005,728.824H323.15v5.05h-1.182v-5.05h-1.846v-.98h4.882Z" transform="translate(-316.998 -720.859)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

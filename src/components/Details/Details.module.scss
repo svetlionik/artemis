@@ -1,0 +1,97 @@
+@import 'custom.scss';
+
+.modal {
+  .modalHeader {
+    display: none;
+  }
+  .title {
+    margin: auto;
+    @include textCustomNew(500, 24px, 29px, $primary, center);
+    padding: 34px 64px 12px 64px;
+  }
+  .body {
+    margin: auto;
+    padding: 0px 64px 24px 64px;
+    text-align: center;
+
+    h5 {
+      text-align: left;
+      font: normal normal normal 16px/19px Montserrat;
+    }
+
+    ul {
+      text-align: left;
+      li {
+        font: normal normal normal 16px/19px Montserrat;
+      }
+    }
+
+    .btn {
+      @include oneButton(
+        $accent,
+        $accent,
+        $accent,
+        $accent-hover,
+        $accent-hover
+      );
+      background: #129fa1 0% 0% no-repeat padding-box;
+      border: none;
+      border-radius: 2px;
+      opacity: 1;
+      width: 192px;
+      height: 40px;
+      margin: 12px auto;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modal {
+    .modalHeader {
+      display: block;
+      background-color: $primary;
+      color: $secondary;
+
+      p {
+        @include newTextClass(
+          normal normal 600 16px/19px Montserrat,
+          $secondary
+        );
+        margin-bottom: 0;
+        padding: 15px 48px 14px 48px;
+      }
+
+      .arrowIcon {
+        margin: -10px 14px -8px -14px;
+        padding-bottom: 2px;
+      }
+    }
+    .title {
+      padding: 34px 64px 12px 64px;
+    }
+    .body {
+      padding: 24px 36px 24px 36px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      h5 {
+        text-align: left;
+        font: normal normal normal 16px/19px Montserrat;
+      }
+
+      ul {
+        text-align: left;
+        li {
+          font: normal normal normal 16px/19px Montserrat;
+        }
+      }
+
+      .btn {
+        border-radius: 2px;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,148 @@
+@import '../../custom.scss';
+$custom-color-line: #eeeeee;
+.practicalTask {
+  text-align: center;
+  min-height: 88vh;
+  height: auto;
+
+  .title {
+    @include textCustomNew(600, 32px, 39px, $primary, center);
+    padding-top: 125px;
+    padding-bottom: 34px;
+    margin-bottom: 0;
+  }
+  .middleLine {
+    max-width: 900px;
+    height: 2px;
+    background-color: $custom-color-line;
+    margin: 24px auto;
+  }
+
+  .additionalText {
+    margin: 48px auto;
+    max-width: 900px;
+    width: auto;
+    @include textCustomNew(normal, 16px, 19px, $text-color-two, center);
+  }
+  .timerContainer {
+    margin-top: 64px;
+  }
+
+  .btnBack {
+    @include oneButton($accent, $accent, $accent, $accent-hover, $accent-hover);
+    margin-top: 112px;
+    margin-bottom: 56px;
+  }
+
+  .submitButton {
+    @include oneButton($accent, $accent, $accent, $accent-hover, $accent-hover);
+    margin: 24px auto;
+  }
+  .linkContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 24px;
+    .link {
+      width: auto;
+      max-width: 900px;
+      height: 42px;
+      @include textCustomNew(500, 16px, 22px, $text-color-two, center);
+      padding: 8px 24px;
+      margin: 0;
+      border: 2px solid $text-color-four;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+      text-align: center;
+      word-wrap: nowrap;
+      white-space: nowrap;
+      overflow-x: auto;
+      &::-webkit-scrollbar {
+        height: 0px;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+      }
+    }
+    .copyButton {
+      border: 2px solid $text-color-four;
+      border-radius: 8px;
+      border-left: none;
+      height: 42px;
+      margin: 0px;
+      background: transparent;
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+      svg {
+        color: $text-color-two;
+        width: 24px;
+        height: 24px;
+        background: transparent;
+        fill: currentColor;
+      }
+      &:hover {
+        svg {
+          color: $secondary;
+        }
+        border: 2px solid $primary;
+        border-left: none;
+        background: $primary;
+        fill: currentColor;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 988px) {
+  .practicalTask {
+    text-align: center;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      font: normal normal 600 24px/29px Montserrat !important;
+      letter-spacing: 0px;
+      padding-top: 48px;
+      padding-bottom: 32px;
+      color: $primary;
+    }
+    .middleLine {
+      margin: 24px 36px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      padding: 0;
+      margin: 12px auto 24px;
+      span {
+        margin: 6px 32px;
+        p {
+          width: 100%;
+        }
+      }
+    }
+
+    .timerContainer {
+      margin: 24px auto;
+    }
+
+    .additionalText {
+      p {
+        width: auto;
+        max-width: 100%;
+      }
+    }
+    .btnBack {
+      width: calc(100vw - 72px);
+      margin: auto auto 115px auto;
+      border-radius: 4px;
+    }
+
+    .submitButton {
+      width: calc(100vw - 72px);
+      margin: 24px auto;
+    }
+  }
+}

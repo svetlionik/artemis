@@ -1,0 +1,12 @@
+{
+  "table": {
+    "steps": [
+      { "name": "Application created", "position": 1 },
+      { "name": "TA Interview", "position": 2 },
+      { "name": "Technical evaluation", "position": 3 },
+      { "name": "Technical interview", "position": 4 },
+      { "name": "Review for offer", "position": 5 },
+      { "name": "Employed/ Terminated", "position": 6 }
+    ]
+  }
+}

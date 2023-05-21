@@ -1,0 +1,21 @@
+{
+    "data": {
+        "HRInterviewer": {
+            "name": "Sara Velkovska",
+            "email": "test@musala.com",
+            "photoURL" : null,
+            "linkedinURL": "https:/linkedin.com/testAccount"
+        },
+        "TechnicalInterviewer": {
+            "name": "Abdelhamid Mohammed",
+            "email": "test@musala.com",
+            "photoURL" : null,
+            "linkedinURL": "https:/linkedin.com/testAccount"
+        },
+        "msMeetingDetails": {
+            "meetingURL": "#",
+            "meetingID": "362 043 434 05",
+            "meetingPasscode": "9LQ5cj"
+        }
+    }
+}

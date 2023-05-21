@@ -1,0 +1,60 @@
+@import 'custom.scss';
+.errorContainer {
+  height: 88vh;
+  margin: 0 !important;
+  padding: 0 !important;
+  .errorPage {
+    background-image: url('/images/bg-time-up.svg');
+    background-size: auto;
+    background-position: 50% 25%;
+    background-repeat: no-repeat;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .topDiv {
+      padding-top: 96px;
+      h1 {
+        @include textCustomNew(600, 48px, 58px, $primary, center);
+      }
+      p {
+        @include textCustomNew(500, 20px, 24px, $text-color-two, center);
+        padding-top: 12px;
+        margin: auto;
+        width: 520px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1200px) {
+  .errorContainer {
+    height: 88vh;
+    margin: 0 !important;
+    padding: 0 !important;
+    .errorPage {
+      background-size: auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .errorContainer {
+    min-height: auto;
+    .errorPage {
+      background-image: url('/images/bg-timeup-mobile.svg');
+      background-position: center;
+      .topDiv {
+        padding-top: 56px;
+        h1 {
+          @include textCustomNew(600, 32px, 39px, $primary, center);
+        }
+        p {
+          @include textCustomNew(500, 18px, 22px, $text-color-two, center);
+          padding-top: 16px;
+          width: auto;
+        }
+      }
+    }
+  }
+}

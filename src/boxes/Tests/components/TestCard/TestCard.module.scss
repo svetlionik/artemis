@@ -1,0 +1,198 @@
+@import 'custom.scss';
+
+$border-color: #f6f6f6;
+$background-second-color: #e2e5de;
+$step-shadow: #f6b40033;
+
+// test card container
+.testCardContainer {
+  margin: 8px;
+  width: auto;
+  max-width: 421px;
+  height: 127px;
+  border: 2px solid $primary;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: opacity 0.2s;
+
+  &:hover {
+    box-shadow: 0px 0px 32px $primary-one;
+    cursor: pointer;
+
+    .inProgressHeader {
+      span {
+        color: $warning !important;
+        svg {
+          color: $warning;
+        }
+      }
+    }
+    .notStartedHeader {
+      span {
+        color: $primary;
+        svg {
+          color: $primary;
+        }
+      }
+    }
+    .practicalHeader {
+      span {
+        color: $success !important;
+        svg {
+          color: $success;
+        }
+      }
+    }
+  }
+
+  .header {
+    display: flex;
+    height: 51px;
+    justify-content: space-between;
+    padding: 16px;
+    border-bottom: 2px solid $primary;
+
+    h6 {
+      font: normal normal 600 16px/19px Montserrat;
+      margin-bottom: 0px;
+    }
+
+    span {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        margin-left: 6px;
+      }
+    }
+  }
+  .submmitedHeader {
+    background-color: $primary-two;
+    border-bottom: 2px solid $primary;
+    &:hover {
+      cursor: default;
+    }
+  }
+
+  .inProgressHeader {
+    background-color: $warning-light;
+    border-bottom: 2px solid $warning;
+  }
+
+  .notStartedHeader {
+    border-bottom: 2px solid $primary;
+  }
+  .practicalHeader {
+    background-color: $success-light;
+    border-bottom: 2px solid $success;
+  }
+
+  .body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .testAttributeContainer {
+      display: flex;
+      flex-direction: column;
+      padding: 16px 4px;
+
+      p {
+        text-align: left;
+        margin: auto 0;
+        font: normal normal normal 14px/18px Montserrat;
+        letter-spacing: -0.28px;
+      }
+
+      .bold {
+        font: normal normal 700 14px/18px Montserrat;
+      }
+
+      .status {
+        padding-top: 9px;
+      }
+      &:nth-child(1) {
+        padding-left: 16px;
+      }
+      &:nth-child(4) {
+        padding-right: 16px;
+      }
+    }
+  }
+}
+
+.practicalBorder {
+  border: 2px solid $success;
+}
+.inProgressBorder {
+  border: 2px solid $warning;
+}
+.submittedCard {
+  cursor: default !important;
+}
+
+@media screen and (max-width: 998px) {
+  .testCardContainer {
+    width: 100%;
+    height: 184px;
+    margin: 8px 0px;
+    .header {
+      height: 52px;
+      max-height: 52px;
+      padding: 16px;
+
+      h6 {
+        font: normal normal 600 16px/19px Montserrat;
+        margin: auto 0;
+      }
+
+      span {
+        h6 {
+          display: none;
+        }
+
+        img {
+          margin-left: 6px;
+        }
+      }
+    }
+    .submmitedHeader {
+      background-color: $primary-two;
+      border-bottom: 2px solid $primary;
+    }
+
+    .inProgressHeader {
+      background-color: $warning-light;
+      border-bottom: 2px solid $warning;
+    }
+
+    .body {
+      display: flex;
+      flex-direction: column;
+
+      .testAttributeContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2px 16px;
+
+        p {
+          color: $text-color;
+          font: normal normal normal 14px/18px Montserrat;
+        }
+
+        .status {
+          font: normal normal normal 16px/19px Montserrat;
+        }
+
+        .bold {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
